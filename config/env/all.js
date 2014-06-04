@@ -3,8 +3,8 @@
 module.exports = {
 	app: {
 		title: 'TimHeneroty',
-		description: 'Pittsburgh-based Full-Stack JavaScript developer with MongoDB, Express, AngularJS, and Node.js, Hockey Coach, Financial Analyst',
-		keywords: 'Heneroty, mongodb, express, angularjs, node.js, mongoose, passport'
+		description: 'Pittsburgh Senior Financial Analyst, Web Developer, Hockey Coach',
+		keywords: 'Tim Heneroty, Hockey Pittsburgh, Web Design Pittsburgh, Hockey Lessons Pittsburgh, Analyst Pittsburgh'
 	},
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',

@@ -16,8 +16,8 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: 'location',
 			templateUrl: 'modules/core/views/home2.client.view.map.html'
 		})
-		./*FINANCE////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-		/*state('home.finance', {
+		/*.
+		state('home.finance', {
 			url: 'finance',
 			templateUrl: 'modules/core/views/home2.client.view.finance.html'
 		}).
@@ -29,8 +29,8 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: 'employers',
 			templateUrl: 'modules/core/views/home2.client.view.finance.employers.html',
 			controller: 'HomeController'
-		})*/./*HOCKEY/////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-		/*state('home.hockey', {
+		}).
+		state('home.hockey', {
 			url: 'hockey',
 			templateUrl: 'modules/core/views/home2.client.view.hockey.html'
 		}).
@@ -41,16 +41,16 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		state('home.hockey.coaching', {
 			url: 'coaching',
 			templateUrl: 'modules/core/views/home2.client.view.hockey.coaching.html'
-		}).*//*WEBDEVELOPMENT/////////////////////////////////////////////////////////////////////////////////////////////////*/
-		/*state('home.web', {
+		}).
+		state('home.web', {
 			url: 'web',
 			templateUrl: 'modules/core/views/home2.client.view.web.html'
 		}).
 		state('home.web.projects', {
 			url: 'projects',
 			templateUrl: 'modules/core/views/home2.client.view.web.projects.html'
-		}).*//*CONTACT //////////////////////////////////////////////////////////////////////////////////////////////////////*/
-		/*state('home.contact', {
+		}).
+		state('home.contact', {
 			url: 'contact',
 			templateUrl: 'modules/core/views/home2.client.view.contact.html'
 		})*/;
