@@ -27,7 +27,7 @@ app.post('/account/profile', passportConf.isAuthenticated, userController.postUp
 app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConf.isAuthenticated, userController.getOauthUnlink);*/
-app.get('/api', apiController.getApi);
+app.get('/api', apiController.getApi);/*
 app.get('/api/lastfm', apiController.getLastfm);
 app.get('/api/nyt', apiController.getNewYorkTimes);
 app.get('/api/aviary', apiController.getAviary);
@@ -39,10 +39,10 @@ app.get('/api/scraping', apiController.getScraping);
 app.get('/api/twilio', apiController.getTwilio);
 app.post('/api/twilio', apiController.postTwilio);
 app.get('/api/clockwork', apiController.getClockwork);
-app.post('/api/clockwork', apiController.postClockwork);
+app.post('/api/clockwork', apiController.postClockwork);*/
 /*app.get('/api/foursquare', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getFoursquare);
-app.get('/api/tumblr', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getTumblr);
-app.get('/api/facebook', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getFacebook);
+app.get('/api/tumblr', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getTumblr);*/
+app.get('/api/facebook', apiController.getFacebook);/*
 app.get('/api/github', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getGithub);
 app.get('/api/twitter', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getTwitter);
 app.get('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getVenmo);

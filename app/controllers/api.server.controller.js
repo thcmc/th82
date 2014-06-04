@@ -1,23 +1,24 @@
 'use strict';
 
 var secrets = require('../../config/secrets');
-var User = require('../models/User');
+var User = require('../models/user.server.model');
 var querystring = require('querystring');
 var validator = require('validator');
 var async = require('async');
 var cheerio = require('cheerio');
 var request = require('request');
 var _ = require('underscore');
-var graph = require('fbgraph');
+var graph = require('fbgraph');/*
 var LastFmNode = require('lastfm').LastFmNode;
 var tumblr = require('tumblr.js');
-var foursquare = require('node-foursquare')({ secrets: secrets.foursquare });
+var foursquare = require('node-foursquare')({ secrets: secrets.foursquare });*/
 /*var Github = require('github-api');*/
-var Twit = require('twit');
+/*var Twit = require('twit');
 var paypal = require('paypal-rest-sdk');
-var twilio = require('twilio')(secrets.twilio.sid, secrets.twilio.token);
-var Linkedin = require('node-linkedin')(secrets.linkedin.clientID, secrets.linkedin.clientSecret, secrets.linkedin.callbackURL);
-var clockwork = require('clockwork')({key: secrets.clockwork.apiKey});
+var twilio = require('twilio')(secrets.twilio.sid, secrets.twilio.token);*/
+/*var Linkedin = require('node-linkedin')(secrets.linkedin.clientID, secrets.linkedin.clientSecret, secrets.linkedin.callbackURL);*/
+/*var clockwork = require('clockwork')({key: secrets.clockwork.apiKey});*/
+/*I didnot npm install node-linkedin (- tim h) */
 
 /**
  * GET /api
@@ -70,7 +71,7 @@ exports.getApi = function(req, res) {
  * Tumblr API example.
  */
 
-exports.getTumblr = function(req, res) {
+/*exports.getTumblr = function(req, res) {
   var token = _.findWhere(req.user.tokens, { kind: 'tumblr' });
   var client = tumblr.createClient({
     consumer_key: secrets.tumblr.consumerKey,
@@ -85,14 +86,14 @@ exports.getTumblr = function(req, res) {
       photoset: data.posts[0].photos
     });
   });
-};
+};*/
 
 /**
  * GET /api/facebook
  * Facebook API example.
  */
 
-/*exports.getFacebook = function(req, res, next) {
+exports.getFacebook = function(req, res, next) {
   var token = _.findWhere(req.user.tokens, { kind: 'facebook' });
   graph.setAccessToken(token.accessToken);
   async.parallel({
@@ -115,14 +116,14 @@ exports.getTumblr = function(req, res) {
       friends: results.getMyFriends
     });
   });
-};*/
+};
 
 /**
  * GET /api/scraping
  * Web scraping example using Cheerio library.
  */
 
-exports.getScraping = function(req, res, next) {
+/*exports.getScraping = function(req, res, next) {
   request.get('https://news.ycombinator.com/', function(err, request, body) {
     if (err) return next(err);
     var $ = cheerio.load(body);
@@ -135,9 +136,56 @@ exports.getScraping = function(req, res, next) {
       links: links
     });
   });
-};
+};*/
 
-exports.getNHLScrape = function(req, res, next) {
+/*exports.mySample = function(req, res, next) {
+  request.get('http://www.google.com', function (err, res, body) {
+    if (!err) {
+      var resultsObj = JSON.parse(body);
+      console.log(resultsObj) // Print the google web page.
+    }
+  });
+};
+*/
+
+/*exports.getScraping = function(req, res, next) {
+  request.get('https://news.ycombinator.com/', function(err, response, body){
+    if (err) return next(err);
+    var $ = cheerio.load(body);
+    var links = [];
+    $(".title a[href^='http'], a[href^='https']").each(function() {
+      var url = this.attr('href');
+      links.push(url);
+    });
+
+    console.log(url);
+  });
+};*/
+
+/*exports.getScraping = function(req, res, next) {
+
+  request.get('https://news.ycombinator.com/', function(err, request, body) {
+    if (err) return next(err);
+
+    var $ = cheerio.load(body);
+    var links = [];
+    $(".title a[href^='http'], a[href^='https']").each(function() {
+      links.push($(this));
+    });
+    
+      res.json(this);
+    res.render('api/scraping', {
+      title: 'Web Scraping',
+      links: links
+    });
+  });
+  console.log(links);
+};
+*/
+/*$ = cheerio.load('<ul id="fruits">...</ul>');*/
+
+
+/*exports.getNHLScrape = function(req, res, next) {
   request.get('http://www.nhl.com/scores/htmlreports/20132014/GS021140.HTM', function(err, request, body) {
     if (err) return next(err);
     var $ = cheerio.load(body);
@@ -151,7 +199,7 @@ exports.getNHLScrape = function(req, res, next) {
     });
   });
 };
-
+*/
 /**
  * GET /api/github
  * GitHub API Example.
@@ -174,18 +222,18 @@ exports.getNHLScrape = function(req, res, next) {
  * Aviary image processing example.
  */
 
-exports.getAviary = function(req, res) {
+/*exports.getAviary = function(req, res) {
   res.render('api/aviary', {
     title: 'Aviary API'
   });
-};
+};*/
 
 /**
  * GET /api/nyt
  * New York Times API example.
  */
 
-exports.getNewYorkTimes = function(req, res, next) {
+/*exports.getNewYorkTimes = function(req, res, next) {
   var query = querystring.stringify({ 'api-key': secrets.nyt.key, 'list-name': 'young-adult' });
   var url = 'http://api.nytimes.com/svc/books/v2/lists?' + query;
   request.get(url, function(error, request, body) {
@@ -196,14 +244,14 @@ exports.getNewYorkTimes = function(req, res, next) {
       books: bestsellers.results
     });
   });
-};
+};*/
 
 /**
  * GET /api/lastfm
  * Last.fm API example.
  */
 
-exports.getLastfm = function(req, res, next) {
+/*exports.getLastfm = function(req, res, next) {
   var lastfm = new LastFmNode(secrets.lastfm);
   async.parallel({
     artistInfo: function(done) {
@@ -253,7 +301,7 @@ exports.getLastfm = function(req, res, next) {
       artist: artist
     });
   });
-};
+};*/
 
 /**
  * GET /api/twitter
@@ -282,7 +330,7 @@ exports.getLastfm = function(req, res, next) {
  * PayPal SDK example.
  */
 
-exports.getPayPal = function(req, res, next) {
+/*exports.getPayPal = function(req, res, next) {
   paypal.configure(secrets.paypal);
 
   var paymentDetails = {
@@ -317,14 +365,14 @@ exports.getPayPal = function(req, res, next) {
       }
     }
   });
-};
+};*/
 
 /**
  * GET /api/paypal/success
  * PayPal SDK example.
  */
 
-exports.getPayPalSuccess = function(req, res, next) {
+/*exports.getPayPalSuccess = function(req, res, next) {
   var paymentId = req.session.paymentId;
   var paymentDetails = { 'payer_id': req.query.PayerID };
   paypal.payment.execute(paymentId, paymentDetails, function(err, payment) {
@@ -340,27 +388,27 @@ exports.getPayPalSuccess = function(req, res, next) {
       });
     }
   });
-};
+};*/
 
 /**
  * GET /api/paypal/cancel
  * PayPal SDK example.
  */
 
-exports.getPayPalCancel = function(req, res, next) {
+/*exports.getPayPalCancel = function(req, res, next) {
   req.session.payment_id = null;
   res.render('api/paypal', {
     result: true,
     canceled: true
   });
-};
+};*/
 
 /**
  * GET /api/steam
  * Steam API example.
  */
 
-exports.getSteam = function(req, res, next) {
+/*exports.getSteam = function(req, res, next) {
   var steamId = '76561197982488301';
   var query = { l: 'english', steamid: steamId, key: secrets.steam.apiKey };
 
@@ -400,18 +448,18 @@ exports.getSteam = function(req, res, next) {
       playerSummary: results.playerSummaries.response.players[0]
     });
   });
-};
+};*/
 
 /**
  * GET /api/twilio
  * Twilio API example.
  */
 
-exports.getTwilio = function(req, res, next) {
+/*exports.getTwilio = function(req, res, next) {
   res.render('api/twilio', {
     title: 'Twilio API'
   });
-};
+};*/
 
 /**
  * POST /api/twilio
@@ -419,7 +467,7 @@ exports.getTwilio = function(req, res, next) {
  * @param telephone
  */
 
-exports.postTwilio = function(req, res, next) {
+/*exports.postTwilio = function(req, res, next) {
   var message = {
     to: req.body.telephone,
     from: '+13472235148',
@@ -430,18 +478,18 @@ exports.postTwilio = function(req, res, next) {
     req.flash('success', { msg: 'Text sent to ' + responseData.to + '.'})
     res.redirect('/api/twilio');
   });
-};
+};*/
 
 /**
  * GET /api/clockwork
  * Clockwork SMS API example.
  */
 
-exports.getClockwork = function(req, res) {
+/*exports.getClockwork = function(req, res) {
   res.render('api/clockwork', {
     title: 'Clockwork SMS API'
   });
-};
+};*/
 
 /**
  * POST /api/clockwork
@@ -449,7 +497,7 @@ exports.getClockwork = function(req, res) {
  * @param telephone
  */
 
-exports.postClockwork = function(req, res, next) {
+/*exports.postClockwork = function(req, res, next) {
   var message = {
     To: req.body.telephone,
     From: 'Hackathon',
@@ -460,13 +508,13 @@ exports.postClockwork = function(req, res, next) {
     req.flash('success', { msg: 'Text sent to ' + responseData.responses[0].to });
     res.redirect('/api/clockwork');
   });
-};
+};*/
 
 /**
  * GET /api/venmo
  * Venmo API example.
  */
-
+/*
 exports.getVenmo = function(req, res, next) {
   var token = _.findWhere(req.user.tokens, { kind: 'venmo' });
   var query = querystring.stringify({ access_token: token.accessToken });
@@ -492,7 +540,7 @@ exports.getVenmo = function(req, res, next) {
       recentPayments: results.getRecentPayments.data
     });
   });
-};
+};*/
 
 /**
  * POST /api/venmo
@@ -502,7 +550,7 @@ exports.getVenmo = function(req, res, next) {
  * Send money.
  */
 
-exports.postVenmo = function(req, res, next) {
+/*exports.postVenmo = function(req, res, next) {
   req.assert('user', 'Phone, Email or Venmo User ID cannot be blank').notEmpty();
   req.assert('note', 'Please enter a message to accompany the payment').notEmpty();
   req.assert('amount', 'The amount you want to pay cannot be blank').notEmpty();
@@ -540,7 +588,7 @@ exports.postVenmo = function(req, res, next) {
     req.flash('success', { msg: 'Venmo money transfer complete' });
     res.redirect('/api/venmo');
   });
-};
+};*/
 
 /**
  * GET /api/linkedin
