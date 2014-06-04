@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
   
   mailgun: {
     login: process.env.MAILGUN_LOGIN || 'Your Mailgun SMTP Username',
@@ -56,4 +56,4 @@ module.exports = {
     returnUrl: process.env.PAYPAL_RETURN_URL || 'http://localhost:3000/api/paypal/success',
     cancelUrl: process.env.PAYPAL_CANCEL_URL || 'http://localhost:3000/api/paypal/cancel'
   }
-};
+};*/
