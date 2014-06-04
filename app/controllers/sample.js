@@ -1,4 +1,4 @@
-
+/*
 var cheerio = require('cheerio');
 var request = require('request');
 
@@ -25,7 +25,7 @@ request.get('http://www.express.com/clothing/Men/New+Arrivals/cat/cat120009', fu
 	});
 
 	console.log(items);
-});
+});*/
 
 
 

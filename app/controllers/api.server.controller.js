@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 var secrets = require('../../config/secrets');
 var User = require('../models/user.server.model');
@@ -8,7 +8,7 @@ var async = require('async');
 var cheerio = require('cheerio');
 var request = require('request');
 var _ = require('underscore');
-var graph = require('fbgraph');/*
+var graph = require('fbgraph');*//*
 var LastFmNode = require('lastfm').LastFmNode;
 var tumblr = require('tumblr.js');
 var foursquare = require('node-foursquare')({ secrets: secrets.foursquare });*/
@@ -25,12 +25,12 @@ var twilio = require('twilio')(secrets.twilio.sid, secrets.twilio.token);*/
  * List of API examples.
  */
 
-exports.getApi = function(req, res) {
+/*exports.getApi = function(req, res) {
   res.render('api/index', {
     title: 'API Browser'
   });
 };
-
+*/
 /**
  * GET /api/foursquare
  * Foursquare API example.
@@ -93,7 +93,7 @@ exports.getApi = function(req, res) {
  * Facebook API example.
  */
 
-exports.getFacebook = function(req, res, next) {
+/*exports.getFacebook = function(req, res, next) {
   var token = _.findWhere(req.user.tokens, { kind: 'facebook' });
   graph.setAccessToken(token.accessToken);
   async.parallel({
@@ -116,7 +116,7 @@ exports.getFacebook = function(req, res, next) {
       friends: results.getMyFriends
     });
   });
-};
+};*/
 
 /**
  * GET /api/scraping
