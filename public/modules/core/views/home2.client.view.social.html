@@ -1,0 +1,36 @@
+<div style="clear: both; position: absolute; margin-top: 40px; background-color:none;">
+	<br>
+	<br>
+
+	<h4>Social media feeds + events</h4>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center"> <!-- visibile-lg hidden-md hidden-sm hidden-xs -->
+		<div class="row">
+			
+		</div>
+	</div>
+
+	<div ng-controller="HomeController">
+
+		<div ng-repeat="employer in employers" class="row" style="margin-left: 2px; margin-right: 12px; margin-top: 12px;">
+			
+			<div class="col-lg-1" style="float: left">
+				<img src="{{employer.img}}">
+			</div>
+			<div class="col-lg-5">
+				<h3>{{employer.name}}</h3>	
+			</div>
+			<div class="col-lg-1" >
+				<h6 style="float: left;"><a href="{{employer.url}}" target="_blank"><i class="fa fa-external-link"></i></a></h6>	
+			</div>
+			<div class="col-lg-2" >
+				<h6 align="center">{{employer.location}}</h6>
+			</div>
+			<div class="col-lg-2" >
+				<h6 align="center">{{employer.dates}}</h6>	
+			</div>
+			
+			<div class="col-lg-12">
+				<p>{{employer.desc}}</p>
+			</div>
+	</div>
+</div>

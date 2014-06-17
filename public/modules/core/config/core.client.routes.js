@@ -15,6 +15,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		state('home.map', {
 			url: 'location',
 			templateUrl: 'modules/core/views/home2.client.view.map.html'
+		}).
+		state('home.social', {
+			url: 'social',
+			templateUrl: 'modules/core/views/home2.client.view.social.html'
 		})
 		/*.
 		state('home.finance', {

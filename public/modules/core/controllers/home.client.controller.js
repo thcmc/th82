@@ -10,7 +10,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
            location: 'Pittsburgh',
            dates:'June 2011 – Present',
            url: 'http://bit.ly/1jYjVM2',
-           img: '../img/bg1.jpg',
+           img: 'public/modules/core/img/GE.jpg',
            desc: 'Building of RESTful singe page applications using Node.js, Angular.js, Express, and MongoDB'
        },
           {
@@ -18,7 +18,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
            location: 'Pittsburgh',
            dates:'January 2012 – April 2013',
            url: 'http://bit.ly/1ioTPMF',
-           img: '../img/bg1.jpg',
+           img: '../img/GE.jpg',
            desc: 'Profit consulting for Lodge Merchandising unit, under the FP&A corporate function'
        },
           {
@@ -26,7 +26,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
            location: 'Pittsburgh',
            dates:'June 2010 – December 2011',
            url: 'http://bit.ly/1mApy1C',
-           img: '../img/bg1.jpg',
+           img: '../img/GE.jpg',
            desc: 'Forecasting, modeling, analysis, earnings reporting, and planning at the corporate level'
        },
           {
@@ -34,7 +34,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
            location:'Shelton, CT',
            dates:'August 2009 – May 2010',
            url: 'http://bit.ly/1wgx72y',
-           img: '../img/bg1.jpg',
+           img: '../img/GE.jpg',
            desc: 'Supply chain finance, P&L statement analysis and management for corporate functions, accounting'
        },
           {
