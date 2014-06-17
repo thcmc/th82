@@ -3,13 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Tim Heneroty -- Proprietor -- @timhene
 
 # THANKS
 
-    <name>
+    All Supporters
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
+    HTML5, CSS3, NODE.JS, ANGULAR.JS, EXPRESS, MONGODB
 
