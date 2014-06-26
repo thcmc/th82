@@ -202,8 +202,12 @@ font-family: 'Montserrat', sans-serif;
 	padding: 12px;
 	margin: 20px;
 /* 	float: right; */
-	
-
+}
+#textDesc {
+	padding: 3px;
+}
+#textDesc p {
+	line-height: 170%;
 }
 #backgroundMainBox div {
 	/* background-color: #000000; */
