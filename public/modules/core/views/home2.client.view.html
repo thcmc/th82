@@ -1,67 +1,40 @@
 <img class="bg" src="modules/core/img/bg1.jpg">
  <div itemscope itemtype="http://schema.org/Person">
- <div class="row">
+ <header class="row">
+
+    <!-- TIMOTHY M HENEROTY -->
     <div id="topBanner" class="col-lg-12 col-md-11 col-sm-11 col-xs-11">
-    
         <h3 align="center" class="topBannerHomeLink" onclick="location.href='http://www.timheneroty.com' " itemprop="name">Timothy M. Heneroty</h3>
         <div align="center">
-            <a ui-sref=".finance"><small>Senior Finance Analyst</small></a> &diams;<!-- 
-            <small id="smallTextInBanner"> Senior Financial Analyst</small> &diams; -->
-            <small id="smallTextInBanner"> Web Developer</small> &diams;
-            <small id="smallTextInBanner"> Hockey Instructor</small>
+            <ul class="navList">
+                <li>Senior Finance Analyst</li> &diams;
+                <li>Web Developer</li>  &diams;
+                <li>Hockey Instructor</li>
+            </ul>
         </div>
+
+        <!-- HEADER NAVIGATION ICONS -->
         <table align="center">
             <thead align="center" style="verticle-align: middle;">
                 <tr>
-                    <td>
-                        <a ui-sref="home" title="home"><i class="fa fa-home fa-2x"></i></a>
-                    </td>
-                    <td>
-                        <a itemprop="email" href="mailto:heneroty.t@gmail.com" title="email"><i class="fa fa-envelope fa-2x"></i></a>
-                    </td>
-                    <td>
-                        <a itemprop="telephone" href="tel:+14124003947" title="412-400-3947"><i class="fa fa-mobile-phone fa-3x"></i></a>
-                    </td>
-                    <td>
-                        <a ui-sref=".map" title="my location [map]"><i class="fa fa-map-marker fa-2x"></i></a>
-                    </td><!-- 
-                    <td><a ui-sref=".social" title="my social media"><i class="fa fa-facebook fa-2x"></i></a></td> -->
-<!--                     <td>
-    <a ui-sref="api"><i class="fa fa-flash fa-2x"></i></a>
-</td> -->
+                    <td><a ui-sref="home" title="home"><i class="fa fa-home fa-2x"></i></a></td>
+                    <td><a itemprop="email" href="mailto:heneroty.t@gmail.com" title="email"><i class="fa fa-envelope fa-2x"></i></a></td>
+                    <td><a itemprop="telephone" href="tel:+14124003947" title="412-400-3947"><i class="fa fa-mobile-phone fa-3x"></i></a></td>
+                    <td><a ui-sref=".map" title="my location [map]"><i class="fa fa-map-marker fa-2x"></i></a></td>
+                    <td><div class="fb-like" data-href="http://www.timheneroty.com" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div></td>
                 </tr>
             </thead>
- <!--            <tbody align="center">
-     <tr>
-         <td><i>email</i></td>
-         <td><i>telephone</i></td>
-         <td><i>location</i></td>
-     </tr>
- </tbody> -->
         </table>
-  <!--       <address>
-      <a href="mailto:heneroty.t@gmail.com">
-              <i style="vertical-align: middle;" class="fa fa-envelope fa-2x"></i></a><br>email:
-      phone:<a href="tel:+14124003947">
-              <i style="vertical-align: middle;" class="fa fa-mobile-phone fa-3x"></i></a>
-      location:<a href="" title="Pittsburgh, PA"><i></i></a> 
-  
-  </address> -->
     </div>
- </div>
+ </header>
 
  <div class="row bigbackplate" style="margin-left: 5%; margin-right: 5%;">
-<!-- <h3 id="backgroundMainBox" class="col-md-11 col-sm-11 col-xs-11 visible-sm visible-xs visible-md">Stay Tuned for more.  Thanks for visiting!</h3>
-<div id="backgroundMainBox" class="col-md-11 col-sm-11 col-xs-11 visible-sm visible-xs visible-md">
-    
-</div> -->
-    <!-- <div id="backgroundMainBox" class="col-lg-8 col-md-10 col-sm-10 col-xs-10"> -->
         <ui-view>
-        	<!-- Finance -->
-            <div class="col-lg-8 col-md-11 col-sm-11 col-xs-11 selectionMain" id="backgroundMainBox">
+        	<!-- FINANCIAL-ANALYSIS + MANAGEMENT-CONSULTING -->
+            <section class="col-lg-8 col-md-11 col-sm-11 col-xs-11 selectionMain" id="backgroundMainBox">
                 <div class="row">
                     <div align="center" style="vertical-align: middle" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                        <!-- <i class="fa fa-bar-chart-o fa-4x"></i> --><img class="logo" src="modules/core/img/corp.jpg">
+                        <img class="logo" src="modules/core/img/corp.jpg">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9" id="textDesc">
                     	<h3 itemprop="jobtitle">Financial Analysis, Management Consulting</h3>
@@ -84,58 +57,80 @@
                             &diams; for-profit post-seconday education <br>
                             &diams; insurance / structured settlements
                         </p>
-                            <!-- <p>Independent consulting with focus on identifying value for each client, and development and implementation of strategies to capitalize on those market opportunities.
-                                                    </p> -->
-                    	<!-- <a ui-sref=".finance">more...</a> -->
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- <h3 id="backgroundMainBox" class="col-lg-3 visible-lg">Stay Tuned for more.  Thanks for visiting!</h3> -->
-            <div id="backgroundMainBox" class="col-lg-3 visible-lg pull-right">
+            <!-- TWITTER-WIDGET -->
+            <div id="backgroundMainBox" class="col-lg-3 visible-lg pull-right selectionMain">
                 <a class="twitter-timeline" href="https://twitter.com/timhene" data-widget-id="481988987859390465">Tweets by @timhene</a>
             </div>
     
 
-            <!-- Web Development //////////////////////////////////////////////////////////////////////////////////////-->
-            <div class="col-lg-8 col-md-11 col-sm-11 col-xs-11 selectionMain" id="backgroundMainBox">
+            <!-- WEB-DEVELOPMENT + DIGITAL-ADVERTISING -->
+            <section class="col-lg-8 col-md-11 col-sm-11 col-xs-11 selectionMain" id="backgroundMainBox">
                 <div class="row" >
                     <div align="center" style="vertical-align: middle" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                        <!-- <i class="fa fa-desktop fa-4x" ></i> --><img class="logo" src="modules/core/img/cmc.jpg">
+                        <img class="logo" src="modules/core/img/cmc.jpg">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9" id="textDesc">
                     	<h3 itemprop="jobtitle">Web Development + Digital Advertising</h3>
                     	<p>
                             Websites &diams; Applications &diams; Advertising &diams; Social Media &diams; SEO <br> 
-                            <!-- <i class="fa fa-caret-right"></i> -->  HTML5 | CSS3 | Node.JS | Angular.JS | MongoDb | Express
+                            HTML5 | CSS3 | Node.JS | Angular.JS | MongoDb | Express
                         </p>
-                    	<!-- <a ui-sref=".web">more...</a> -->
                     </div>
                     </div>
+            </section>
+
+            <!-- For-SALE -->
+            <div id="backgroundMainBox" class="col-lg-3 visible-lg pull-right selectionMain">
+                <div id="image">
+                    <img align="center" src="modules/core/img/forsale1.png" alt="New and Used items of many varieties"/>
+                    <h3>Marketplace<br> ...coming soon</h3>
+                </div>
             </div>
-			<!-- Hockey Coaching ////////////////////////////////////////////////////////////////////////////////-->
-            <div class="col-lg-8 col-md-11 col-sm-11 col-xs-11 selectionMain" id="backgroundMainBox">
+
+			<!-- HOCKEY-INSTRUCTION -->
+            <section class="col-lg-8 col-md-11 col-sm-11 col-xs-11 selectionMain" id="backgroundMainBox">
                 <div class="row">
                     <div align="center" style="vertical-align: middle" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                        <!-- <i class="fa fa-pause fa-4x"></i> --><img class="logo" src="modules/core/img/hockey.jpg">
+                        <img class="logo" src="modules/core/img/hockey.jpg">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9" id="textDesc">
                     	<h3 itemprop="jobtitle">Hockey Instruction</h3>
                     	<p> 
                             15+ years coaching &diams; 25 years playing experience<br>
-                            <!-- <i class="fa fa-caret-right"></i> -->
                             Lessons Available! <i class="fa fa-caret-right"></i> Goalies (All ages) daily @ Ice Castle, Castle Shannon</p>
                     </div>
                 </div>
-            </div>
-            <div id="backgroundMainBox" class="col-lg-3 visible-lg pull-right">
+            </section>
+
+            <!-- FB-LIKE_or_SHARE-WIDGET -->
+            <!-- <aside id="backgroundMainBox" class="col-lg-3 visible-lg pull-right selectionMain">
                 <div class="fb-like" data-href="http://www.timheneroty.com" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
-            </div>
-            <!-- <div class="col-lg-12 col-md-11 col-sm-11 col-xs-11" id="backgroundMainBox">
-                <ul>
-                    <li><a ui-sref="home" title="home">4Sale</a></li>
+            </aside> -->
+
+            <!-- Goalie Lessons -->
+            <aside id="backgroundMainBox" class="col-lg-3 visible-lg pull-right selectionMain">
+                <div id="image">
+                    <img align="center" src="modules/core/img/lessons1.png" alt="New and Used items of many varieties"/>
+                    <h3>Goalie Lessons</h3>
+                </div>
+            </aside>
+
+            <!-- OTHER -->
+            <!-- <aside id="backgroundMainBox" class="col-xs-11 visible-xs col-sm-11 visible-sm col-md-11 visible-md selectionMain">
+            <h3>Other:</h3>
+                <ul class="selectionList">
+                    <li><a href=""><i class="fa fa-dollar"></i> SALE PAGE <i class="fa fa-cny"></i></a></li>
+                    <li><a href="http://www.creativemonsterconsulting">My business</a></li>
+            
                 </ul>
-            </div> -->
-        </ui-view>    
+            </aside> -->
+
+
+        </ui-view>
+
 </div>   <!-- end of row --> 
 </div> <!-- end of itemscope schema -->
