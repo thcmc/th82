@@ -20,11 +20,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: 'social',
 			templateUrl: 'modules/core/views/home2.client.view.social.html'
 		})
-		/*.
+		.
 		state('home.finance', {
 			url: 'finance',
 			templateUrl: 'modules/core/views/home2.client.view.finance.html'
-		}).
+		})/*.
 		state('home.finance.roles', {
 			url: 'roles',
 			templateUrl: 'modules/core/views/home2.client.view.finance.roles.html'

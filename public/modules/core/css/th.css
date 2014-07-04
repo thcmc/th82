@@ -1,3 +1,10 @@
+.bigbackplate {
+	position: relative;
+	background-color:rgba(211, 209, 198, 0.9);
+}
+.selectionMain {
+	border: 1px solid white;
+}
 html {
 	background-image: url('../img/bg1.jpg');
 	background-repeat: no-repeat;
@@ -8,6 +15,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
+
 .fa-home {
 	margin-top: 2px;
 	margin-left: 2px;
@@ -18,6 +26,10 @@ body {
 }
 #dropdownFa {
 	color: #B1BAD0;
+}
+.logo {
+	border: 1px solid black;
+	vertical-align: middle;
 }
 /* -------------------------------------------------------------TEXT + FONTS */
 p {
@@ -49,6 +61,7 @@ h5 {
 }
 h6 {
 	font-family: ;
+	color: #CC1C1E;
 }
 
 /* ----------------------------------------------------------ASIDE NAV */
@@ -149,12 +162,14 @@ description {
 
 /* ----------------------------------------------------------HOMEPAGE TOP BANNER */
 #topBanner {
-	background-color:rgba(153, 200, 254, 0.4);
+	/* background-color:rgba(153, 200, 254, 0.4); */
+	background-color: rgba(255, 255, 255, 0.2);
   	padding: 12px;
   	margin: 10px;
   	-moz-box-shadow:    inset 0 0 10px #B9C0D0;
     -webkit-box-shadow: inset 0 0 10px #B9C0D0;
     box-shadow:         inset 0 0 10px #B9C0D0;
+    border: 1px solid white;
 }
 #topBanner p {
 	/* background-color: rgba(0, 0, 0, 0.1); */
@@ -175,7 +190,7 @@ font-family: 'Montserrat', sans-serif;
 	padding: 2px;
 	margin-right: 2px;
 	margin-left: 1px;
-	line-height: 30px;
+	line-height: 35px;
 /* 	background-color: rgba(153, 200, 254, 0.4); */
 }
 #dates {
@@ -205,6 +220,9 @@ font-family: 'Montserrat', sans-serif;
 }
 #textDesc {
 	padding: 3px;
+}
+#textDesc h3 {
+	color: #CC1C1E;
 }
 #textDesc p {
 	line-height: 170%;
@@ -289,7 +307,7 @@ font-family: 'Montserrat', sans-serif;
 	cursor:pointer;
 }
 #smallTextInBanner {
-	color: blue;
+	color: #CC1C1E;
 }
 /*  -----------------------------------------------------------------INDEX.SCHEDULE  */
 #eventRow {

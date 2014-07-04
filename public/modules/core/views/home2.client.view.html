@@ -3,11 +3,14 @@
  <div class="row">
     <div id="topBanner" class="col-lg-12 col-md-11 col-sm-11 col-xs-11">
     
-        <h3 style="vertical-align: middle;" class="topBannerHomeLink" onclick="location.href='http://www.timheneroty.com' " itemprop="name">Tim M. Heneroty: 
-            <small id="smallTextInBanner"> Senior Financial Analyst <strong>|</strong> Web Developer  with NodeJS, AngularJS, Express, &amp; MongoDB <strong>|</strong> Hockey Coach
-            </small>
-        </h3>
-        <table>
+        <h3 align="center" class="topBannerHomeLink" onclick="location.href='http://www.timheneroty.com' " itemprop="name">Timothy M. Heneroty</h3>
+        <div align="center">
+            <a ui-sref=".finance"><small>Senior Finance Analyst</small></a> &diams;<!-- 
+            <small id="smallTextInBanner"> Senior Financial Analyst</small> &diams; -->
+            <small id="smallTextInBanner"> Web Developer</small> &diams;
+            <small id="smallTextInBanner"> Hockey Instructor</small>
+        </div>
+        <table align="center">
             <thead align="center" style="verticle-align: middle;">
                 <tr>
                     <td>
@@ -47,7 +50,7 @@
     </div>
  </div>
 
- <div class="row" style="margin-left: 5%; margin-right: 5%;">
+ <div class="row bigbackplate" style="margin-left: 5%; margin-right: 5%;">
 <!-- <h3 id="backgroundMainBox" class="col-md-11 col-sm-11 col-xs-11 visible-sm visible-xs visible-md">Stay Tuned for more.  Thanks for visiting!</h3>
 <div id="backgroundMainBox" class="col-md-11 col-sm-11 col-xs-11 visible-sm visible-xs visible-md">
     
@@ -55,18 +58,34 @@
     <!-- <div id="backgroundMainBox" class="col-lg-8 col-md-10 col-sm-10 col-xs-10"> -->
         <ui-view>
         	<!-- Finance -->
-            <div class="col-lg-8 col-md-11 col-sm-11 col-xs-11" id="backgroundMainBox">
+            <div class="col-lg-8 col-md-11 col-sm-11 col-xs-11 selectionMain" id="backgroundMainBox">
                 <div class="row">
                     <div align="center" style="vertical-align: middle" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                        <i class="fa fa-bar-chart-o fa-4x"></i>
+                        <!-- <i class="fa fa-bar-chart-o fa-4x"></i> --><img class="logo" src="modules/core/img/corp.jpg">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9" id="textDesc">
-                    	<h3 itemprop="jobtitle">Independent Consultant | Sr Financial Analyst</h3>
-                    	<p>
-                            <i class="fa fa-caret-right"></i>  7+ years of corporate finance experience with Fortune 500 companies<br> 
-                            <i class="fa fa-caret-right"></i>  Skilled in financial analysis, modeling, accounting, reporting, and strategic planning<br>
-                            <i class="fa fa-caret-right"></i>  Independent consulting with focus on identifying value for each client, and development and implementation of strategies to capitalize on those market opportunities.
+                    	<h3 itemprop="jobtitle">Financial Analysis, Management Consulting</h3>
+                    	<p>7+ years corporate finance experience with Fortune 500 companies</p>
+                        <h6>Skills/Roles</h6>
+                        <p>
+                            &diams; financial analysis 
+                            &diams; modeling &diams; forecasting 
+                            &diams; budgeting 
+                            &diams; P&amp;L oversight 
+                            &diams; GAAP/IFRS accounting 
+                            &diams; public reporting 
+                            &diams; strategic planning 
+                            &diams; capex / opex
                         </p>
+                        <h6>Industries/Sectors:</h6>
+                        <p>
+                            &diams; retail / merchandising / consumer goods<br>
+                            &diams; distribution / supply chain / logistics / production services<br>
+                            &diams; for-profit post-seconday education <br>
+                            &diams; insurance / structured settlements
+                        </p>
+                            <!-- <p>Independent consulting with focus on identifying value for each client, and development and implementation of strategies to capitalize on those market opportunities.
+                                                    </p> -->
                     	<!-- <a ui-sref=".finance">more...</a> -->
                     </div>
                 </div>
@@ -79,35 +98,33 @@
     
 
             <!-- Web Development //////////////////////////////////////////////////////////////////////////////////////-->
-            <div class="col-lg-8 col-md-11 col-sm-11 col-xs-11" id="backgroundMainBox">
+            <div class="col-lg-8 col-md-11 col-sm-11 col-xs-11 selectionMain" id="backgroundMainBox">
                 <div class="row" >
                     <div align="center" style="vertical-align: middle" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                        <i class="fa fa-desktop fa-4x" ></i>
+                        <!-- <i class="fa fa-desktop fa-4x" ></i> --><img class="logo" src="modules/core/img/cmc.jpg">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9" id="textDesc">
-                    	<h3 itemprop="jobtitle">Website Developer</h3>
+                    	<h3 itemprop="jobtitle">Web Development + Digital Advertising</h3>
                     	<p>
-                            <i class="fa fa-caret-right"></i>  Enthusiast developer specializing in the development of RESTful applications<br> 
-                            <i class="fa fa-caret-right"></i>  Skill set includes: HTML5 | CSS3 | Node.JS | Angular.JS | MongoDb | Express
+                            Websites &diams; Applications &diams; Advertising &diams; Social Media &diams; SEO <br> 
+                            <!-- <i class="fa fa-caret-right"></i> -->  HTML5 | CSS3 | Node.JS | Angular.JS | MongoDb | Express
                         </p>
                     	<!-- <a ui-sref=".web">more...</a> -->
                     </div>
                     </div>
             </div>
 			<!-- Hockey Coaching ////////////////////////////////////////////////////////////////////////////////-->
-            <div class="col-lg-8 col-md-11 col-sm-11 col-xs-11" id="backgroundMainBox">
+            <div class="col-lg-8 col-md-11 col-sm-11 col-xs-11 selectionMain" id="backgroundMainBox">
                 <div class="row">
                     <div align="center" style="vertical-align: middle" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                        <i class="fa fa-pause fa-4x"></i>
+                        <!-- <i class="fa fa-pause fa-4x"></i> --><img class="logo" src="modules/core/img/hockey.jpg">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9" id="textDesc">
-                    	<h3 itemprop="jobtitle">Hockey Coach</h3>
-                    	<p>
-                            <i class="fa fa-caret-right"></i> 15+ years as a hockey coach; specialty in goalie instruction<br>
-                            <i class="fa fa-caret-right"></i> Goalies lessons currently available at <a target="_blank" title="map: Ice Castle, Castle Shannon PA" href="http://icecastlearena.com/">Ice Castle</a> daily from 3:30 pm - 5:00 pm. <br> 
-                            <i class="fa fa-caret-right"></i><a href="tel:+14124003947"> Call</a> for more details. </p>
-
-                    	<!-- <a ui-sref=".hockey">more...</a> -->
+                    	<h3 itemprop="jobtitle">Hockey Instruction</h3>
+                    	<p> 
+                            15+ years coaching &diams; 25 years playing experience<br>
+                            <!-- <i class="fa fa-caret-right"></i> -->
+                            Lessons Available! <i class="fa fa-caret-right"></i> Goalies (All ages) daily @ Ice Castle, Castle Shannon</p>
                     </div>
                 </div>
             </div>
