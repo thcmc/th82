@@ -8,12 +8,13 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap.min.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
 				'public/modules/core/css/bootstrap.css',
-				'public/modules/core/css/th.css',
+				'public/modules/core/css/home3.css',
 				'//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css',
 				'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300',
 				'https://fonts.googleapis.com/css?family=Megrim',
 				'https://fonts.googleapis.com/css?family=Rosarivo',
-				'https://fonts.googleapis.com/css?family=Montserrat'
+				'https://fonts.googleapis.com/css?family=Montserrat',
+				'https://fonts.googleapis.com/css?family=Poiret+One'
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
@@ -21,7 +22,10 @@ module.exports = {
 				'public/lib/angular-animate/angular-animate.min.js',
 				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
 				'public/lib/angular-ui-utils/ui-utils.min.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js'
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+				'//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js',
+				'http://cdn.jsdelivr.net/g/angular.textangular@1.2.2(textAngular-sanitize.min.js+textAngular.min.js)',
+				'//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'
 			]
 		},
 		css: 'public/dist/application.min.css',

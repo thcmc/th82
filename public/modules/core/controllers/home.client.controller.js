@@ -3,8 +3,7 @@
 angular.module('core').controller('HomeController', ['$scope', 'Authentication', function ($scope, Authentication) {
     $scope.authentication = Authentication;
 
-
-    $scope.employers = [
+    /*$scope.employers = [
           {
           	name: 'Creative Monster Consulting LLC',
            location: 'Pittsburgh',
@@ -53,5 +52,5 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
            img: '../img/bg1.jpg',
            desc: 'Finance co-op through Northeastern University. Helped finance division decipher structured finance products and contractual agreements'
        }
-        ];
+        ];*/
 }]);

@@ -10,8 +10,20 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		$stateProvider.
 		state('home', {
 			url: '/',
-			templateUrl: 'modules/core/views/home2.client.view.html'
+			templateUrl: 'modules/core/views/h.client.view.html'
 		}).
+		state('home.finance', {
+			url: 'finance',
+			templateUrl: 'modules/core/views/h.client.view.finance.html'
+		}).
+		state('home.web', {
+			url: 'web',
+			templateUrl: 'modules/core/views/h.client.view.web.html'
+		}).
+		state('home.athletics', {
+			url: 'athletics',
+			templateUrl: 'modules/core/views/h.client.view.athletics.html'
+		})/*.
 		state('home.map', {
 			url: 'location',
 			templateUrl: 'modules/core/views/home2.client.view.map.html'
@@ -24,7 +36,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		state('home.finance', {
 			url: 'finance',
 			templateUrl: 'modules/core/views/home2.client.view.finance.html'
-		})/*.
+		}).
 		state('home.finance.roles', {
 			url: 'roles',
 			templateUrl: 'modules/core/views/home2.client.view.finance.roles.html'

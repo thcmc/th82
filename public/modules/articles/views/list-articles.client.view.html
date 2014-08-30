@@ -1,15 +1,40 @@
 <section data-ng-controller="ArticlesController" data-ng-init="find()">
-    <div class="page-header">
-        <h1>Articles</h1>
+
+
+    <div class="page-header col-md-12">
+        <h3>The Latest</h3>
+        <h1>Archive</h1>
     </div>
-    <div class="list-group">
-        <a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
-            <small class="list-group-item-text">{{article.created | date:'medium'}} / {{article.user.displayName}}</small>
-            <h4 class="list-group-item-heading">{{article.title}}</h4>
-            <p class="list-group-item-text">{{article.content}}</p>
+
+    
+    <div class="list-group col-md-7">
+        <a data-ng-repeat="article in articles | limitTo:articleLimit" data-ng-href="#!/articles/{{article._id}}" class="list-group-item ArticleContainer">
+            <h4><b>{{article.title}}</b></h4>
+            <p ta-bind="text" ng-model="article.content" ta-readonly='disabled'>{{article.content | limitTo:numLimit}}</p>
+            <img src="https://graph.facebook.com/#{me.id}/picture?type=large" style="float: right;"> 
+            <small class="" align="left"><i class="fa fa-clock-o"></i>&nbsp; {{article.created | date:'medium'}}&nbsp; <i class="fa fa-ellipsis-h">&nbsp;&nbsp;</i> {{article.user.displayName}}</small>
         </a>
     </div>
-    <div class="alert alert-warning text-center" data-ng-hide="!articles.$resolved || articles.length">
+
+    <div class="list-group col-md-4" style="border: 1px solid black; margin-left: 25px; padding: 10px;">
+        <h3>About</h3>
+        <ul>
+            <li><a href="#!/finance"><i>Professional Finance</i></a></li>
+            <li><a href="#!/web"><i>Freelance Developer</i></a></li>
+            <li><a href="#!/athletics"><i>Athletics</i></a></li>
+        </ul>
+        <h3>News</h3>
+        <ul>
+            <li><a href="#!/articles">News Archive</a></li>
+        </ul>
+        <h3><a href="#!/">Home</a></h3>
+
+    </div>
+
+
+    <div class="alert alert-warning text-center col-md-12" data-ng-hide="!articles.$resolved || articles.length">
     	No articles yet, why don't you <a href="/#!/articles/create">create one</a>?
     </div>
+
+
 </section>
