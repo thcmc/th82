@@ -3,9 +3,9 @@
 	<a class="timheneroty" ui-sref="home"><h1>MR. TIM M. HENEROTY</h1></a>
 	
 	<div class="row">
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref=".finance"><i>Professional Finance</i></a></div>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref=".web"><i>Freelance Developer</i></a></div>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref=".athletics"><i>Athletics</i></a></div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".finance"><i>Professional Finance</i></a></div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".web"><i>Freelance Developer</i></a></div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".athletics"><i>Athletics</i></a></div>
 	</div>
 
 	<div class="row mainContent">
@@ -45,28 +45,30 @@
 			        <h3>The Latest</h3>
 			    </div>
 
-			    <div class="list-group">
+			    <div class="list-group homepageArticleList">
 			        <a data-ng-repeat="article in articles | limitTo:articleLimit" data-ng-href="#!/articles/{{article._id}}" class="list-group-item ArticleContainer">
-			            <h4><b>{{article.title}}</b></h4><!-- 
+			            <h3 align="left">&Star;<b> {{article.title}}</b></h3><!-- 
 			            <p ta-bind="text" ng-model="article.content" ta-readonly='disabled'>{{article.content | limitTo:numLimit}}</p>
 			            			           <img src="https://graph.facebook.com/#{me.id}/picture?type=large" style="float: right;"> 
 			            			           <small class="" align="left"><i class="fa fa-clock-o"></i>&nbsp; {{article.created | date:'medium'}}&nbsp; <i class="fa fa-ellipsis-h">&nbsp;&nbsp;</i> {{article.user.displayName}}</small> -->
 			        </a>
 			    </div>
 
-			    <a href="#!/articles">View All Articles</a>
+			    <a href="#!/articles" class="viewAllArticlesButton">View All Articles</a>
 			    <div class="alert alert-warning text-center" data-ng-hide="!articles.$resolved || articles.length">
 			    	No articles yet, why don't you <a href="/#!/articles/create">create one</a>?
 			    </div>
 		    </article>
 
-		    <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="border: 1px solid black; margin-left: 25px; padding: 10px;">
-				<h6><i>Thank You For Visiting!</i><br> This site was developed using:</h6>
-					<a href="http://www.meanjs.org" target="_blank"><img src="modules/core/img/brand/logo.png"></a>
-					<a ui-sref="portfolio">View my Portfolio</a>
-			</aside>
+		    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-11" >
+		    	<aside style="margin: 40px; border: 1px solid black; padding: 10px;">
+					<h6><i>Thank You For Visiting!</i><br> This site was developed using:</h6>
+						<a href="http://www.meanjs.org" target="_blank"><img src="modules/core/img/brand/logo.png"></a>
+						<!-- <a ui-sref="portfolio">View my Portfolio</a> -->
+				</aside>	
+			</div>
 
-			<aside class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="border: 1px solid black; margin-left: 25px; margin-top: 20px; padding: 10px;">
+			<!-- <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="border: 1px solid black; margin-left: 25px; margin-top: 20px; padding: 10px;">
 				<h6><i>Want to Get in touch?</h6>
 				<ul class="socialList">
 					<li><a href="https://www.facebook.com/theneroty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
@@ -74,27 +76,39 @@
 					<li><a href="https://www.youtube.com/channel/UCd07uVM2XDcVHLcZGPfTusg" target="_blank"><i class="fa fa-youtube-play fa-2x"></i></a></li>
 					<li><a href="https://twitter.com/timhene" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
 				</ul>
+			</aside> -->
+
+
+			<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks" style="border: 1px solid black; margin-top: 20px; padding: 10px;">
+				<h6><i>View My Skills</h6>
+				<a ui-sref=".finance">Finance</a>
+				<a ui-sref=".web">Web</a>
+				<a ui-sref=".athletics">Athletics</a>
+				<!-- <ul class="socialList">
+					<li><a ui-sref=".finance">Finance</a></li>
+					<li><a ui-sref=".web">Web</a></li>
+					<li><a ui-sref=".athletics">Athletics</a></li>
+				</ul> -->
 			</aside>
 
-			<aside class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="border: 1px solid black; margin-left: 25px; margin-top: 20px; padding: 10px;">
-				<h6><i>Or Telephone and/or Email:</h6>
-				<ul class="socialList">
+			<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks" style="border: 1px solid black; margin-top: 20px; padding: 10px;">
+				<h6><i>Contact</h6>
+				
+				<a href="https://www.facebook.com/theneroty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+				<a href="https://www.linkedin.com/in/timheneroty" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+				<a href="mailto:th@creativemonsterconsulting.com"><i class="fa fa-envelope fa-2x"></i></a>
+				<a href="tel:+14124478555"><i class="fa fa-phone fa-2x"></i></a>
+				<a href="https://www.youtube.com/channel/UCd07uVM2XDcVHLcZGPfTusg" target="_blank"><i class="fa fa-youtube-play fa-2x"></i></a>
+				<a href="https://twitter.com/timhene" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+
+				<!-- <ul class="socialList">
 					<li><a href="mailto:th@creativemonsterconsulting.com">
 						<i class="fa fa-envelope fa-2x"></i></a>
 					</li>
 					<li><a href="tel:+14124478555"
 						><i class="fa fa-phone fa-2x"></i></a>
 					</li>
-				</ul>
-			</aside>
-
-			<aside class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="border: 1px solid black; margin-left: 25px; margin-top: 20px; padding: 10px;">
-				<h6><i>View My Skills</h6>
-				<ul class="socialList">
-					<li><a ui-sref=".finance">Finance</a></li>
-					<li><a ui-sref=".web">Web</a></li>
-					<li><a ui-sref=".athletics">Athletics</a></li>
-				</ul>
+				</ul> -->
 			</aside>
 
 			<!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="margin-left: 25px; margin-top: 20px; padding: 0px 10px 10px 10px;">
