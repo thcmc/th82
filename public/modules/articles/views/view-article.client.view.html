@@ -1,20 +1,35 @@
-<section data-ng-controller="ArticlesController" data-ng-init="findOne()">
-	<div class="page-header">
-		<h1>{{article.title}}</h1>
+<img class="bg" src="modules/core/img/bg1.jpg">
+<div class="mainWrapper">
+	<a class="timheneroty" ui-sref="home"><h1>MR. TIM M. HENEROTY</h1></a>
+	
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref="home.finance"><i>Professional Finance</i></a></div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref="home.web"><i>Freelance Developer</i></a></div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref="home.athletics"><i>Athletics</i></a></div>
 	</div>
 
-	<div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
-		<a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
+	<div class="row mainContent">
+		<section data-ng-controller="ArticlesController" data-ng-init="findOne()">
+
+			<div class="page-header articleTitle">
+				<h1>{{article.title}}</h1>
+			</div>
+
+			<div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
+				<a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
+					<i class="glyphicon glyphicon-edit"></i>
+				</a>
+				<a class="btn btn-primary" data-ng-click="remove();">
+					<i class="glyphicon glyphicon-trash"></i>
+				</a>
+			</div>
+			<small>
+				<em class="text-muted">Posted on {{article.created | date:'mediumDate'}} by {{article.user.displayName}}</em>
+			</small>
+			<p class="lead articleContent" ta-bind="text" ng-model="article.content" ta-readonly='disabled' style="background: white;">
+				<span class="theLatestContent">{{article.content}}</span>
+			</p>
+		</section>
 	</div>
-	<small>
-		<em class="text-muted">Posted on {{article.created | date:'mediumDate'}} by {{article.user.displayName}}</em>
-	</small>
-	<p class="lead" ta-bind="text" ng-model="article.content" ta-readonly='disabled'>
-		{{article.content}}
-	</p>
-</section>
+
+</div>

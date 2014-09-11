@@ -21,7 +21,7 @@ h6 {color: #405100;}
 .list-group a:hover {background-color: rgba(0,0,0,.2);}
 
 /*  Tim Heneroty */
-.timheneroty {color: #061539;  font-family: 'Poiret One', cursive; }
+.timheneroty {position: relative; color: #061539;  font-family: 'Poiret One', cursive; }
 .timheneroty:hover {color: #061539;}
 
 .socialList {list-style: none; float: left;}

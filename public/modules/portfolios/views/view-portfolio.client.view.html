@@ -1,0 +1,47 @@
+
+	<section data-ng-controller="PortfoliosController" data-ng-init="findOne()">
+		<div class="page-header">
+			<h1 data-ng-bind="portfolio.name"></h1>
+		</div>
+		<div class="pull-right" data-ng-show="authentication.user._id == portfolio.user._id">
+			<a class="btn btn-primary" href="/#!/portfolios/{{portfolio._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i>
+			</a>
+			<a class="btn btn-primary" data-ng-click="remove();">
+				<i class="glyphicon glyphicon-trash"></i>
+			</a>
+		</div>
+		<small>
+			<em class="text-muted">
+				Posted on
+				<span data-ng-bind="portfolio.created | date:'mediumDate'"></span>
+				by
+				<span data-ng-bind="portfolio.user.displayName"></span>
+			</em>
+		</small>
+	</section>
+
+	<footer data-ng-controller="HomeController" align="center">
+		<ul data-ng-hide="authentication.user" style="list-style:none;">
+	<!-- 		<li ui-route="/signup" ng-class="{active: $uiRoute}">
+		<a href="/#!/signup">Signup</a>
+	</li> -->
+			<li ui-route="/signin" ng-class="{active: $uiRoute}">
+				<a href="/#!/signin"><i class="fa fa-header fa-2x"></i></a>
+			</li>
+		</ul>
+		<ul data-ng-show="authentication.user" style="list-style:none;">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	                    {{authentication.user.displayName}} <b class="caret"></b>
+	                </a>
+					<ul class="dropdown-menu">
+						<li><a href="/#!/settings/profile">Edit Profile</a></li>
+						<li><a href="/#!/settings/accounts">Manage Social Accounts</a></li>
+						<li data-ng-show="authentication.user.provider === 'local'"><a href="/#!/settings/password">Change Password</a></li>
+						<li class="divider"></li>
+						<li><a href="/auth/signout">Signout</a></li>
+					</ul>
+				</li>
+			</ul>
+	</footer>

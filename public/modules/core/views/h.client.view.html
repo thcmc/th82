@@ -1,6 +1,6 @@
 <img class="bg" src="modules/core/img/bg1.jpg">
 <div class="mainWrapper">
-	<h1><a class="timheneroty" ui-sref="home">MR. TIM M. HENEROTY</a></h1>
+	<a class="timheneroty" ui-sref="home"><h1>MR. TIM M. HENEROTY</h1></a>
 	
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref=".finance"><i>Professional Finance</i></a></div>
@@ -47,10 +47,10 @@
 
 			    <div class="list-group">
 			        <a data-ng-repeat="article in articles | limitTo:articleLimit" data-ng-href="#!/articles/{{article._id}}" class="list-group-item ArticleContainer">
-			            <h4><b>{{article.title}}</b></h4>
+			            <h4><b>{{article.title}}</b></h4><!-- 
 			            <p ta-bind="text" ng-model="article.content" ta-readonly='disabled'>{{article.content | limitTo:numLimit}}</p>
-			           <!-- <img src="https://graph.facebook.com/#{me.id}/picture?type=large" style="float: right;"> --> 
-			           <small class="" align="left"><i class="fa fa-clock-o"></i>&nbsp; {{article.created | date:'medium'}}&nbsp; <i class="fa fa-ellipsis-h">&nbsp;&nbsp;</i> {{article.user.displayName}}</small>
+			            			           <img src="https://graph.facebook.com/#{me.id}/picture?type=large" style="float: right;"> 
+			            			           <small class="" align="left"><i class="fa fa-clock-o"></i>&nbsp; {{article.created | date:'medium'}}&nbsp; <i class="fa fa-ellipsis-h">&nbsp;&nbsp;</i> {{article.user.displayName}}</small> -->
 			        </a>
 			    </div>
 
@@ -63,6 +63,7 @@
 		    <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="border: 1px solid black; margin-left: 25px; padding: 10px;">
 				<h6><i>Thank You For Visiting!</i><br> This site was developed using:</h6>
 					<a href="http://www.meanjs.org" target="_blank"><img src="modules/core/img/brand/logo.png"></a>
+					<a ui-sref="portfolio">View my Portfolio</a>
 			</aside>
 
 			<aside class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="border: 1px solid black; margin-left: 25px; margin-top: 20px; padding: 10px;">

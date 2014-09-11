@@ -1,0 +1,19 @@
+<section data-ng-controller="PortfoliosController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Portfolios</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="portfolio in portfolios" data-ng-href="#!/portfolios/{{portfolio._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="portfolio.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="portfolio.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="portfolio.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!portfolios.$resolved || portfolios.length">
+    	No Portfolios yet, why don't you <a href="/#!/portfolios/create">create one</a>?
+    </div>
+</section>
