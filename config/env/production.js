@@ -14,7 +14,10 @@ module.exports = {
 				'https://fonts.googleapis.com/css?family=Megrim',
 				'https://fonts.googleapis.com/css?family=Rosarivo',
 				'https://fonts.googleapis.com/css?family=Montserrat',
-				'https://fonts.googleapis.com/css?family=Poiret+One'
+				'https://fonts.googleapis.com/css?family=Poiret+One',
+				'https://fonts.googleapis.com/css?family=Lato',
+				'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700italic',
+				'https://fonts.googleapis.com/css?family=Niconne'
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
