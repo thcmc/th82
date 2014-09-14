@@ -1,7 +1,8 @@
 <img class="bg" src="modules/core/img/bg1.jpg">
 <div class="mainWrapper">
 	<a class="timheneroty" ui-sref="home"><h1>MR. TIM M. HENEROTY</h1></a>
-	
+
+<!-- LINKS (Internal) -->
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".finance"><i>Professional Finance</i></a></div>
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".web"><i>Freelance Developer</i></a></div>
@@ -9,165 +10,69 @@
 	</div>
 
 	<div class="row mainContent">
-	
-<!-- SIDE LEFT COLUMN -->
-	<!-- <aside class="col-lg-1 col-md-2 col-sm-2 col-xs-1"> -->
-	<!-- 		
-		<h6>Web Solutions</h6>
-		<a href="" title="" alt="" target=""><img src=""></a>
 
-		<h6>Management Consulting</h6>
-		<a href="" title="" alt="" target=""><img src=""></a>
-
-
-		<h6><i>Get in Contact</i></h6>
-		<a href="mailto:th@creativemonsterconsulting.com" title="Email" alt="Email"><img src="http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/48/Buzz-Message-outline-icon.png"></a>
-		<a href="tel:+14124003947" title="Phone" alt="Phone"><img src=""></a>
-		
-		
-		<h6><i>Social</i></h6>
-		<a href="https://www.linkedin.com/in/timheneroty" target="_blank" title="Tim H. on LinkedIn" alt="Tim H. on LinkedIn"><i class="fa fa-linkedin"></i></a>
-		<a href="" title="Facebook" alt="Facebook" target="_blank"><img src=""></a>
-		<a href="" title="Twitter" alt="Twitter" target="_blank"><img src=""></a>
-		<a href="" title="Pinterest" alt="Pinterest" target="_blank"><img src="http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/48/Logos-Printerest-icon.png"></a>
-
-		<h6><i>Sitemap</i></h6>
-		<a href=""><img src="http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/48/Business-Parallel-tasks-icon.png"></a>
-	-->
-	<!-- </aside> -->
-
-	<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > <!--firsttry: col-lg-10 col-md-8 col-sm-8 col-xs-9 secondtry:col-lg-10 col-md-8 col-sm-8 col-xs-9 -->
-		<ui-view>
-			
-			<article class="col-lg-8 col-md-8 col-sm-8 col-xs-12" data-ng-controller="ArticlesController" data-ng-init="find()">
-			    
-			    <div class="page-header">
-			        <h3>The Latest</h3>
-			    </div>
-
-			    <div class="list-group homepageArticleList">
-			        <a data-ng-repeat="article in articles | limitTo:articleLimit" data-ng-href="#!/articles/{{article._id}}" class="list-group-item ArticleContainer">
-			            <h3 align="left">&Star;<b> {{article.title}}</b></h3><!-- 
-			            <p ta-bind="text" ng-model="article.content" ta-readonly='disabled'>{{article.content | limitTo:numLimit}}</p>
-			            			           <img src="https://graph.facebook.com/#{me.id}/picture?type=large" style="float: right;"> 
-			            			           <small class="" align="left"><i class="fa fa-clock-o"></i>&nbsp; {{article.created | date:'medium'}}&nbsp; <i class="fa fa-ellipsis-h">&nbsp;&nbsp;</i> {{article.user.displayName}}</small> -->
-			        </a>
-			    </div>
-
-			    <a href="#!/articles" class="viewAllArticlesButton">View All Articles</a>
-			    <div class="alert alert-warning text-center" data-ng-hide="!articles.$resolved || articles.length">
-			    	No articles yet, why don't you <a href="/#!/articles/create">create one</a>?
-			    </div>
-		    </article>
-
-		    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-11" >
-		    	<aside style="margin: 40px; border: 1px solid black; padding: 10px;">
-					<h6><i>Thank You For Visiting!</i><br> This site was developed using:</h6>
-						<a href="http://www.meanjs.org" target="_blank"><img src="modules/core/img/brand/logo.png"></a>
-						<!-- <a ui-sref="portfolio">View my Portfolio</a> -->
-				</aside>	
-			</div>
-
-			<!-- <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="border: 1px solid black; margin-left: 25px; margin-top: 20px; padding: 10px;">
-				<h6><i>Want to Get in touch?</h6>
-				<ul class="socialList">
-					<li><a href="https://www.facebook.com/theneroty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/timheneroty" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
-					<li><a href="https://www.youtube.com/channel/UCd07uVM2XDcVHLcZGPfTusg" target="_blank"><i class="fa fa-youtube-play fa-2x"></i></a></li>
-					<li><a href="https://twitter.com/timhene" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
-				</ul>
-			</aside> -->
-
-
-			<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks" style="border: 1px solid black; margin-top: 20px; padding: 10px;">
-				<h6><i>View My Skills</h6>
-				<a ui-sref=".finance">Finance</a>
-				<a ui-sref=".web">Web</a>
-				<a ui-sref=".athletics">Athletics</a>
-				<!-- <ul class="socialList">
-					<li><a ui-sref=".finance">Finance</a></li>
-					<li><a ui-sref=".web">Web</a></li>
-					<li><a ui-sref=".athletics">Athletics</a></li>
-				</ul> -->
-			</aside>
-
-			<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks" style="border: 1px solid black; margin-top: 20px; padding: 10px;">
-				<h6><i>Contact</h6>
-				
-				<a href="https://www.facebook.com/theneroty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-				<a href="https://www.linkedin.com/in/timheneroty" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-				<a href="mailto:th@creativemonsterconsulting.com"><i class="fa fa-envelope fa-2x"></i></a>
-				<a href="tel:+14124478555"><i class="fa fa-phone fa-2x"></i></a>
-				<a href="https://www.youtube.com/channel/UCd07uVM2XDcVHLcZGPfTusg" target="_blank"><i class="fa fa-youtube-play fa-2x"></i></a>
-				<a href="https://twitter.com/timhene" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-
-				<!-- <ul class="socialList">
-					<li><a href="mailto:th@creativemonsterconsulting.com">
-						<i class="fa fa-envelope fa-2x"></i></a>
-					</li>
-					<li><a href="tel:+14124478555"
-						><i class="fa fa-phone fa-2x"></i></a>
-					</li>
-				</ul> -->
-			</aside>
-
-			<!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="margin-left: 25px; margin-top: 20px; padding: 0px 10px 10px 10px;">
-				<img src="http://placehold.it/200x330">
-			</div> -->
-
-
-		<!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-11" style="border: 1px solid black; margin-left: 25px; margin-top: 20px; padding: 10px;">
-			<p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div> -->
-		</ui-view>
-	</section>
-		<!-- <section class="col-lg-10 col-md-8 col-sm-8 col-xs-9">
+		<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 articleFeature" > 
 			<ui-view>
-				<div class="insideUI">
-					<p>I developed this site for Headhunters and Companies interested in employing me.  I'm currently a freelance web developer with skills in both front and back end technologies and a growingly strong specialisation in Node.JS, Angular.JS, MongoDB, and Express. Originally coming from a finance and accounting background, I offer 7+ years analysis, modeling, financial management, and stratigic planning abilities. Additionally, from years of continuous hockey playing and instruction, I bring leadership qualities, including patience, strong work-ethic, attention to detail, and competitive team spirit.</p>
-				</div>
-			</ui-view>
-		</section> -->
-<!-- SIDE RIGHT COLUMN -->
-	<!-- <aside class="col-lg-1 col-md-2 col-sm-2 col-xs-1"> -->	
-	<!--
-	<h6><i>For Sale</i></h6>
-	<a href=""><img src="http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/48/Business-Sale-icon.png"></a>
 
-	<h6><i>Fav Links</i></h6>
-	<a href="">A</a>
-	<a href="">A</a>
-	<a href="">A</a>
-	<a href="">A</a>
-	<a href="">A</a>
-	<a href="">A</a>
-	<a href="">A</a>
-	<a href="">A</a>
-	<a href="">A</a>
-	<a href="">A</a>
-	
-	
-	<h6><i>Donate</i></h6>
-	<a href=""><img src="http://icons.iconarchive.com/icons/icons8/android/48/Christmas-santa-icon.png"></a>
-	
-	<h6>Icons</h6>
-	<a href="http://icons8.com/"><img src=""></a>
-	 -->
-	<!-- </aside> -->
+	<!-- ARTICLE LISTING -->			
+				<article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 articleFeatureList" data-ng-controller="ArticlesController" data-ng-init="find()">
+				    
+				    <div class="page-header">
+				        <h3>The Latest Rumblings</h3>
+				        <h6>Software development | Hockey Coaching | Corporate Finance</h6>
+				    </div>
+
+				    <div class="list-group">
+				        <a data-ng-repeat="article in articles | limitTo:articleLimit" data-ng-href="#!/articles/{{article._id}}" class="ArticleContainer">
+				        <!-- list-group-item  -->
+				            <h6 align="left">&Star;<b> {{article.title}}</b></h6>
+				        </a>
+				    </div>
+
+
+				    <a href="#!/articles" class="viewAllArticlesButton">View All Articles</a>
+			    </article>
+
+	<!-- ASIDE(top-right) -->
+			    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-11" >
+			    	<aside style="margin: 40px; border: 1px solid black; padding: 10px;">
+						<h6><i>Thank You For Visiting!</i><br> This site was developed using:</h6>
+							<a href="http://www.meanjs.org" target="_blank"><img src="modules/core/img/brand/logo.png"></a>
+							<!-- <a ui-sref="portfolio">View my Portfolio</a> -->
+					</aside>	
+				</div>
+
+
+	<!-- VIEW SKILLS -->
+				<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks" style="border: 1px solid black; margin-top: 20px; padding: 10px;">
+					<h6><i>View Skills</h6>
+					<a ui-sref=".finance">Finance</a>
+					<a ui-sref=".web">Web</a>
+					<a ui-sref=".athletics">Athletics</a>
+				</aside>
+
+	<!-- LINKS -->
+				<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks" style="border: 1px solid black; margin-top: 20px; padding: 10px;">
+					<!-- <h6><i>Contact</h6> -->
+					
+					<a href="https://www.facebook.com/theneroty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+					<a href="https://www.linkedin.com/in/timheneroty" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+					<a href="mailto:th@creativemonsterconsulting.com"><i class="fa fa-envelope fa-2x"></i></a>
+					<a href="tel:+14124478555"><i class="fa fa-phone fa-2x"></i></a>
+					<a href="https://www.youtube.com/channel/UCd07uVM2XDcVHLcZGPfTusg" target="_blank"><i class="fa fa-youtube-play fa-2x"></i></a>
+					<a href="https://twitter.com/timhene" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+
+				</aside>
+
+			</ui-view>
+		</section>
 	
 	</div>
 </div>
 
 <footer data-ng-controller="HomeController" align="center">
 	<ul data-ng-hide="authentication.user" style="list-style:none; margin-top: 240px;">
-<!-- 		<li ui-route="/signup" ng-class="{active: $uiRoute}">
-	<a href="/#!/signup">Signup</a>
-</li> -->
+
 		<li ui-route="/signin" ng-class="{active: $uiRoute}">
 			<a href="/#!/signin"><i class="fa fa-header fa-2x"></i></a>
 		</li>

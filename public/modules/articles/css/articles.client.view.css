@@ -2,3 +2,22 @@
 	 padding: 25px; border: 2px ridge #FFE3AA;
 	 background-color: rgba(0, 0, 0, 0.9);
 }
+
+
+.mainContent .articleFeature {
+	background-color: rgba(186,187,191,.3);
+	padding: 50px;
+}
+
+.mainContent .articleSection {
+	background-color: rgba(186,187,191,1);
+	padding: 50px;
+
+}
+
+.articleFeatureList {
+	background-color: white;
+	padding: 20px;
+	border: 1px solid wheat;
+
+}

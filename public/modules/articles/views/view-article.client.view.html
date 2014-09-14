@@ -2,19 +2,25 @@
 <div class="mainWrapper">
 	<a class="timheneroty" ui-sref="home"><h1>MR. TIM M. HENEROTY</h1></a>
 	
+	<!-- LINKS (Internal) -->
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref="home.finance"><i>Professional Finance</i></a></div>
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref="home.web"><i>Freelance Developer</i></a></div>
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a ui-sref="home.athletics"><i>Athletics</i></a></div>
 	</div>
 
+
+	<!-- MAIN CONTENT -->
 	<div class="row mainContent">
-		<section data-ng-controller="ArticlesController" data-ng-init="findOne()">
+		
+		<!-- SECTION -->
+		<section class="articleSection" data-ng-controller="ArticlesController" data-ng-init="findOne()">
 
 			<div class="page-header articleTitle">
 				<h1>{{article.title}}</h1>
 			</div>
 
+			<!-- editing icons (if authenticated) -->
 			<div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
 				<a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
 					<i class="glyphicon glyphicon-edit"></i>
@@ -23,13 +29,15 @@
 					<i class="glyphicon glyphicon-trash"></i>
 				</a>
 			</div>
+
 			<small>
 				<em class="text-muted">Posted on {{article.created | date:'mediumDate'}} by {{article.user.displayName}}</em>
 			</small>
+
 			<p class="lead articleContent" ta-bind="text" ng-model="article.content" ta-readonly='disabled' style="background: white;">
 				<span class="theLatestContent">{{article.content}}</span>
 			</p>
+
 		</section>
 	</div>
-
 </div>
