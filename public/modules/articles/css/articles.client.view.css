@@ -2,6 +2,13 @@
 .mainContent .articleSection {
 	background-color: rgba(0,0,0, .7);
 }
+
+.articleSection {
+	-moz-box-shadow: 0 3px 40px 1px #FFFFFF;
+	-webkit-box-shadow: 0 3px 40px 1px #FFFFFF;
+	box-shadow: 0 3px 40px 1px #FFFFFF;
+}
+
 .articleContent {
 	 padding: 25px; 
 }
@@ -34,7 +41,7 @@ u {color: #A9B2C3;
 	max-width:100% !important;
     height:auto;
     display:block;
-    
+
 /*	clear: both;
 	float: center;
 	height: auto;
@@ -46,9 +53,9 @@ u {color: #A9B2C3;
 
 .articleFeatureList {
 	margin: 12px;
-	background-color: rgba(0,0,0,.7);
+	background-color: rgba(0,0,0,.9);
 	padding: 20px;
-	border: 1px solid wheat;
+	border: 4px outset #A9B2C3;
 }
 
 .articleFeatureList h6 {color: #7B89A3;

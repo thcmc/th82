@@ -1,5 +1,7 @@
 <!-- <img class="bg" src="modules/core/img/bg1.jpg"> -->
-<div class="financeWrapper" style="margin: 75px; 0 75px 0 ">
+
+<div class="financeWrapper" style="margin: 75px; 0 75px 0;">
+	
 	<a class="timheneroty" ui-sref="home"><h1>MR. TIM M. HENEROTY</h1></a>
 
 	<!-- NAV  -->
@@ -11,49 +13,56 @@
 
 	<div class="row mainContent">	
 
-		<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 articleFeature" > 
+		<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+			
+			
 			<ui-view>
 
 				<!-- ARTICLE LISTING -->			
 				<article class="col-lg-8 col-md-8 col-sm-7 col-xs-12 articleFeatureList" data-ng-controller="ArticlesController" data-ng-init="find()">
-				    
+				  
 				    <div class="page-header">
-				        <h3>The Latest</h3>
-				        <!-- <h6>News | Updates | Announcements</h6> -->
+				        <h3>The Latest</h3><!-- <h6>News | Updates | Announcements</h6> -->
 				    </div>
 
 				    <div class="articleList">
 				        <a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="ArticleContainer"> <!--  | limitTo:articleLimit -->
-				        
 				            <h6 align="left">{{article.created | date:'shortDate'}} --<b> {{article.title}}</b></h6>
-				        </a>
+				        </a>	
 				    </div>
 				    <!-- <a href="#!/articles" class="viewAllArticlesButton">View More</a> -->
 			    </article>
 
-	<!-- ASIDE(top-right) -->
+				<!-- ABOUT THIS SITE -->
 			    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-			    	<aside style="margin: 12px; border: 1px solid black; padding: 10px;">
-						<h6><i>About This Site</i><br> This site was developed using:</h6>
-							<a href="http://www.meanjs.org" target="_blank"><img src="modules/core/img/brand/logo.png"></a>
-							<!-- <a ui-sref="portfolio">View my Portfolio</a> -->
+			    	<aside class="aboutSite">
+						<h6><i>About This Site</i>
+						<br>
+						This site was developed using:
+						</h6>
+						<a href="http://www.meanjs.org" target="_blank"><img src="modules/core/img/brand/logo.png"></a>
 					</aside>	
 				</div>
 
-	<!-- LINKS -->
-				<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks" style="border: 1px solid black; margin-top: 20px; padding: 10px;">
-					<!-- <h6><i>Contact</h6> -->
-					
-					<a href="https://www.facebook.com/theneroty" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-					<a href="https://www.linkedin.com/in/timheneroty" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-					<a href="mailto:th@creativemonsterconsulting.com"><i class="fa fa-envelope fa-2x"></i></a>
-					<a href="tel:+14124478555"><i class="fa fa-phone fa-2x"></i></a>
-					<a href="https://www.youtube.com/channel/UCd07uVM2XDcVHLcZGPfTusg" target="_blank"><i class="fa fa-youtube-play fa-2x"></i></a>
-					<a href="https://twitter.com/timhene" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-
+				<!-- SOCIAL LINKS -->
+				<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks">
+					<a href="https://www.facebook.com/theneroty" target="_blank">
+						<i class="fa fa-facebook fa-2x"></i></a>
+					<a href="https://www.linkedin.com/in/timheneroty" target="_blank">
+						<i class="fa fa-linkedin fa-2x"></i></a>
+					<a href="mailto:th@creativemonsterconsulting.com">
+						<i class="fa fa-envelope fa-2x"></i></a>
+					<a href="tel:+14124478555">
+						<i class="fa fa-phone fa-2x"></i></a>
+					<a href="https://www.youtube.com/channel/UCd07uVM2XDcVHLcZGPfTusg" target="_blank">
+						<i class="fa fa-youtube-play fa-2x"></i></a>
+					<a href="https://twitter.com/timhene" target="_blank">
+						<i class="fa fa-twitter fa-2x"></i></a>
 				</aside>
 
 			</ui-view>
+
+
 		</section>
 	
 	</div>
@@ -80,4 +89,4 @@
 				</ul>
 			</li>
 		</ul>
-</footer>
+</footer> -->

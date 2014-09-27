@@ -1,8 +1,14 @@
 /* 
 .mainContent {background: '../img/bg/ecailles.png'; background-repeat: repeat-y repeat-x;} */
+
 .html, .container, .content, .footer {
     background-color: #7B89A3;
 }
+
+body {background-color: #7B89A3;}
+
+
+
 /*.bg {
     filter: alpha(opacity=30);  
         -moz-opacity: 0.3;  
@@ -24,7 +30,7 @@ a {
 }
 a:hover {
     color: #FFE3AA; 
-cursor: pointer;
+    cursor: pointer;
 }
 p {
     font-family: 'Lato', sans-serif;
@@ -43,9 +49,22 @@ h4 {
     color: #FFE3AA; 
     cursor: pointer;
 }
+.aboutSite {
+    margin: 12px; 
+    border: 1px solid black; 
+    padding: 10px;
+}
+
+.skillLinks {
+    border: 1px solid black; 
+    margin-top: 20px; 
+    padding: 10px;
+}
 .skillLinks a {
     margin: 20px; 
     font-stretch: 4px;
+
+
 }
 .navOptions {
     list-style: none; 
@@ -123,6 +142,7 @@ aside {
     background: white; 
     padding: 25px; 
     border: 2px ridge #FFE3AA; 
+    box-shadow: 10px 10px 5px #000000;
 }
 
 .MainCompanyExperience {padding-left: 25px; padding-right: 25px;}
