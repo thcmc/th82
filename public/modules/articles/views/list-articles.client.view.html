@@ -1,40 +1,45 @@
-<section data-ng-controller="ArticlesController" data-ng-init="find()">
+
+    <section data-ng-controller="ArticlesController" data-ng-init="find()">
 
 
-    <div class="page-header col-md-12">
-        <h3>The Latest</h3>
-        <h1>Archive</h1>
-    </div>
+        <div class="page-header col-md-12">
+            <div class="row">
+                <h3 class="col-md-12">The Latest</h3>
+                <h1 class="col-md-9">Archive</h1>
+            </div>
+        </div>
 
-    
-    <div class="list-group col-md-7">
-        <a data-ng-repeat="article in articles | limitTo:articleLimit" data-ng-href="#!/articles/{{article._id}}" class="list-group-item ArticleContainer">
-            <h4><b>{{article.title}}</b></h4><!-- 
-            <p ta-bind="text" ng-model="article.content" ta-readonly='disabled'>{{article.content | limitTo:numLimit}}</p>
-            <img src="https://graph.facebook.com/#{me.id}/picture?type=large" style="float: right;"> 
-            <small class="" align="left"><i class="fa fa-clock-o"></i>&nbsp; {{article.created | date:'medium'}}&nbsp; <i class="fa fa-ellipsis-h">&nbsp;&nbsp;</i> {{article.user.displayName}}</small> -->
-        </a>
-    </div>
+        <!-- ARTICLE LISTING -->
+        <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+            <a data-ng-repeat="article in articles | limitTo:articleLimit" data-ng-href="#!/articles/{{article._id}}" class="list-group-item ArticleContainer">
+                <h4>
+                    <b>{{article.title}}</b>
+                    <span class="text-muted hidden-xs" style="float: right;">{{article.created | date:'medium'}}
+                    </span>
+                </h4>
+                <!-- 
+                <p ta-bind="text" ng-model="article.content" ta-readonly='disabled'>{{article.content | limitTo:numLimit}}</p>
+                <img src="https://graph.facebook.com/#{me.id}/picture?type=large" style="float: right;"> 
+                <small class="" align="left"><i class="fa fa-clock-o"></i>&nbsp; {{article.created | date:'medium'}}&nbsp; <i class="fa fa-ellipsis-h">&nbsp;&nbsp;</i> {{article.user.displayName}}</small> 
+                -->
+            </a>
+        </div>
 
-    <div class="list-group col-md-4" style="border: 1px solid black; margin-left: 25px; padding: 10px;">
-        <h3>About</h3>
-        <ul>
-            <li><a href="#!/finance"><i>Professional Finance</i></a></li>
-            <li><a href="#!/web"><i>Freelance Developer</i></a></li>
-            <li><a href="#!/athletics"><i>Athletics</i></a></li>
-        </ul>
-        <h3>News</h3>
-        <ul>
-            <li><a href="#!/articles">News Archive</a></li>
-        </ul>
-        <h3><a href="#!/">Home</a></h3>
+        <!-- ASIDE LINKS (Internal) -->
+        <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12 pull-right articleListViewAside" >
+            <div style="border: 1px solid black; padding: 10px;">
+                <p class="col-md-1"><a href="#!/"><i class="fa fa-home fa-2x"></i></a></p><br><br>
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#!/finance"><i>Professional Finance</i></a></li>
+                    <li><a href="#!/web"><i>Freelance Developer</i></a></li>
+                    <li><a href="#!/athletics"><i>Athletics</i></a></li>
+                </ul>
+                <h3>News</h3>
+                <ul>
+                    <li><a href="#!/articles">News Archive</a></li>
+                </ul>
+            </div>
+        </div>
 
-    </div>
-
-
-    <div class="alert alert-warning text-center col-md-12" data-ng-hide="!articles.$resolved || articles.length">
-    	No articles yet, why don't you <a href="/#!/articles/create">create one</a>?
-    </div>
-
-
-</section>
+    </section>

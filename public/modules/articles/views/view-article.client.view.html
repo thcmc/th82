@@ -1,4 +1,4 @@
-<img class="bg" src="modules/core/img/bg1.jpg">
+<!-- <img class="bg" src="modules/core/img/bg1.jpg"> -->
 <div class="mainWrapper">
 	<a class="timheneroty" ui-sref="home"><h1>MR. TIM M. HENEROTY</h1></a>
 	
@@ -16,17 +16,17 @@
 		<!-- SECTION -->
 		<section class="articleSection" data-ng-controller="ArticlesController" data-ng-init="findOne()">
 
-			<div class="page-header articleTitle">
+			<div class="page-header">
 				<h1>{{article.title}}</h1>
 			</div>
 
 			<!-- editing icons (if authenticated) -->
 			<div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
-				<a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
-					<i class="glyphicon glyphicon-edit"></i>
+				<a class="btn btn-sm btn-info" href="/#!/articles/{{article._id}}/edit">
+					<i class="fa fa-pencil-square-o"></i>
 				</a>
-				<a class="btn btn-primary" data-ng-click="remove();">
-					<i class="glyphicon glyphicon-trash"></i>
+				<a class="btn btn-sm btn-danger" data-ng-click="remove();">
+					<i class="fa fa-trash"> (cannot be recovered)</i>
 				</a>
 			</div>
 
@@ -34,7 +34,8 @@
 				<em class="text-muted">Posted on {{article.created | date:'mediumDate'}} by {{article.user.displayName}}</em>
 			</small>
 
-			<p class="lead articleContent" ta-bind="text" ng-model="article.content" ta-readonly='disabled' style="background: white;">
+			<!-- ARTICLE Content -->
+			<p class="lead articleContent" ta-bind="text" ng-model="article.content" ta-readonly='disabled'>
 				<span class="theLatestContent">{{article.content}}</span>
 			</p>
 

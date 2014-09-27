@@ -1,5 +1,5 @@
 
-<div class="financeWrapper">
+<div class="" ng-controller="HomeController">
 	<h4><i>Experienced, dedicated, professional</i></h4>
 	<h2 class="mainTitle">Senior Financial Analyst / Financial Management Professional</h2>
 	<!-- 
@@ -18,164 +18,79 @@
 	-->
 <hr>	
 	<section>
-		<h3>&sstarf;</h3>
-		<h3>Performance profile</h3>
-		<p class="col-lg-12">Senior financial analyst experienced in delivering efficient operational financial management for multinational and domestic Fortune 500 companies through high-impact business analysis, strategic planning, financial modeling, and accounting.  
-		<br><br>
-		Small business operator providing business intelligence, technology, and advisory services for community-based businesses and non-profit organizations.
-		<br><br>  
-		Community resource helping local athletes with hockey skill development, coaching, and mentoring.
-		<!-- <br><br>
-		Core competencies in all aspects of financial analysis, forecasting, planning, and budgeting; P&amp;L oversight; data modeling; accounting; reporting; business performance analysis, business strategy; operations; supply chain finance; web services; instruction and coaching.
-		<br><br>
-		Adept at working with multiple teams and stakeholders including C-level executives, functional division leaders, and customer-facing operations.
-		<br><br>
-		Highly ambitious, resilient, and adaptable.
-		<br><br>
-		Continuously involved in on-going education (self-study &amp; open-course) across business management and web development (full-stack) fields. -->
-		</p>
+		<div class="nav nav-pills nav-stacked">
+		  <section ng-repeat="stuff in meanStuff">
+		  	<h3>&sstarf;</h3>
+		  	<h3>{{stuff.title}}</h3>
+		  	<p class="col-lg-12">{{stuff.desc1}}</p>
+		  	<p class="col-lg-12">{{stuff.desc2}}</p>
+		  	<p class="col-lg-12">{{stuff.desc3}}</p>
+		  </section>
+		<div>
 	</section>
-
 <hr>
 	<section>
-		<h3>&sstarf;</h3>
-		<h3>Core competencies</h3>
-		<p class="col-lg-12">
-			Planning, budgeting, and forecasting activities | Resource allocation | Driving standardization | Process Improvement | Variance Analysis | Flash reporting | Internal and External reporting | Financial modeling | Preparation of Quarterly Earnings | Month-end closing | Compare and contrast business performance | P&amp;L oversight | Financial presentations
-		</p>
+		<div>
+			<section>
+				<h3>Professional Experience</h3>
+				<h3>&sstarf;</h3>
+				<h3>Independent Consulting</h3><br>
+
+				<div class="row MainCompanyExperience" ng-repeat="stuff in experienceStuff">
+					<p class="col-md-3 workName">{{stuff.workname}}</p>
+					<p class="col-md-2 workDates">{{stuff.workdates}}</p>
+					<p class="col-md-6 workType">{{stuff.worktype}}</p>
+					<!-- <p class="col-md-12 workDescription">{{stuff.workdesc}}</p> -->
+				</div>
+
+				<h3>&sstarf;</h3>
+				<h3>Corporate Finance</h3><br>
+				<div class="row MainCompanyExperience" ng-repeat="stuff in corporateStuff">
+					<p class="col-lg-3 workName">{{stuff.workname}}</p>
+					<p class="col-lg-2 workDates">{{stuff.workdates}}</p>
+					<p class="col-lg-3 workType">{{stuff.worktitle}}</p>
+					<p class="col-lg-4 workType">{{stuff.workdept}}</p>
+					<p class="col-lg-12 workDescription">{{stuff.workdesc}}</p>
+
+				</div>
+			</section>
+		</div>
 	</section>
-	<br>
+<br>
 <hr>
 	<section>
 		<h3>&sstarf;</h3>
 		<h3>Technical competencies</h3>
 		<div class="col-lg-12">
 			<table class="technicalCompetenciesTable">
-				<tr>
-					<td><b>Office</b>:</td>
-					<td>MS Word | MS Excel | MS Outlook | MS PowerPoint | MS Sharepoint | MS Visio | Hyperion | SAP | Cognos | Business Objects | Oracle  </td>
-				</tr>
-				<tr>
-					<td><b>Web</b>:</td>
-					<td>HTML5 | CSS3 | Node.JS | Angular.JS | Express | MongoDB</td>
-				</tr>
-				<tr>
-					<td><b>Creative</b>:</td>
-					<td>Adobe CS5.5 -  Fireworks | Photoshop | After Effects | Audition</td>
-				</tr>
-				<tr>
-					<td><b>Productivity</b>:</td>
-					<td>Podio | Trello | MindMeister  </td>
+				<tr ng-repeat="stuff in technicalStuff">
+					<td><b>{{stuff.category}}</b>:</td>
+					<td>{{stuff.skill}}</td>
 				</tr>
 			</table>
 		</div>
 	</section>
 <hr>
 	<section>
-		<h3>Professional Experience</h3>
-		<h3>&sstarf;</h3>
-		<h3>Independent Consulting</h3><br>
-		<div class="row MainCompanyExperience">
-			<!-- -->
-		<!-- 	<p class="col-lg-3 rowTitle"><u>Company</u></p>
-		<p class="col-lg-2 rowTitle"><u>Timeframe</u></p>
-		<p class="col-lg-6 rowTitle"><u>Work Performed</u></p> -->
-
-			<!-- -->
-			<p class="col-lg-3 workName">Creative Monster Consulting</p>
-			<p class="col-lg-2 workDates">2011-Present</p>
-			<p class="col-lg-6 workType"><!-- desc... --></p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-			
-			<!-- -->
-			<p class="col-lg-3 workName">Catholic Youth Association of Pittsburgh</p>
-			<p class="col-lg-2 workDates">2012-Present</p>
-			<p class="col-lg-6 workType"><!-- desc... --></p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-			
-			<!-- -->
-			<p class="col-lg-3 workName">East End Eatz Inc.</p>
-			<p class="col-lg-2 workDates">2014-Present</p>
-			<p class="col-lg-6 workType"><!-- desc... --></p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-			
-			<!-- -->
-			<p class="col-lg-3 workName">Albert's Lounge</p>
-			<p class="col-lg-2 workDates">2014</p>
-			<p class="col-lg-7 workType"><!-- desc... --></p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-			
-			<!-- -->
-			<p class="col-lg-3 workName">G.A.S.S. Hockey</p>
-			<p class="col-lg-2 workDates">2013</p>
-			<p class="col-lg-7 workType"><!-- desc... --></p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-			
-			<!-- -->
-			<p class="col-lg-3 workName">Upstairs Audio</p>
-			<p class="col-lg-2 workDates">2013</p>
-			<p class="col-lg-7 workType"><!-- desc... --></p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-		</div>
-<hr>
-		<h3>&sstarf;</h3>
-		<h3>Corporate Finance</h3><br>
-		<div class="row MainCompanyExperience">
-			<!-- -->
-			<p class="col-lg-3 workName">Dick's Sporting Goods</p>
-			<p class="col-lg-2 workDates">2012-2013</p>
-			<p class="col-lg-3 workType">Senior Financial Analyst</p>
-			<p class="col-lg-4 workType">Forecasting, Planning, and Analysis</p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-			
-			<!-- -->
-			<p class="col-lg-3 workName">Education Management Corporation</p>
-			<p class="col-lg-2 workDates">2010-2012</p>
-			<p class="col-lg-3 workType">Senior Financial Analyst</p>
-			<p class="col-lg-4 workType">Forecasting, Planning, and Analysis</p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-			
-			<!-- -->
-			<p class="col-lg-3 workName">General Electric / Gexpro</p>
-			<p class="col-lg-2 workDates">2007-2010</p>
-			<p class="col-lg-3 workType">Management Trainee</p>
-			<p class="col-lg-4 workType">Financial Management Program</p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-			
-			<!-- -->
-			<p class="col-lg-3 workName">Aviva Insurance USA</p>
-			<p class="col-lg-2 workDates">2006-2007</p>
-			<p class="col-lg-3 workType">Finance Co-op / Intern</p>
-			<p class="col-lg-4 workType">Structured Settlements</p>
-			<p class="col-lg-12 workDescription"><!-- desc... --></p>
-		</div>
-	</section>
-<hr>
-	<section>
 		<h3>&sstarf;</h3>
 		<h3>Education</h3>
-		<div class="row MainCompanyExperience">
+		<div class="row MainCompanyExperience" ng-repeat="stuff in educationStuff">
 			<p class="col-lg-3 workName">General Electric</p>
 			<p class="col-lg-2 workDates">CT, 2007-2009</p>
 			<p class="col-lg-6 workType">Financial Management Program</p>
-			<div class="col-lg-12 workDescription"><h5><i>2-year post-graduate certificate program (testing, presentations, &amp; on-site finance assignments)</i></h5>
-			<!-- <ul style="list-style-type: upper-roman;">
-				<li>Finance, SCM, Operations, Sourcing, Marketing processes and analysis; Financial modeling; Accounting; Metals market pricing and tracking; FX transactions and options hedging management.</li>
-				<li>Regional management of P&amp;L finances &amp; commercial operations; Budgeting cycles; Inventory accounting methodologies and systems usage; Transaction dispute resolution and systems handling;</li>
-				<li>Service operations financial P&amp;L management and executive support; </li>
-				<li>Controllership; Process creation for marketing spend controls and oversight; Risk analysis by operation, control-risk planning; Branch cost optimization.</li>
-			</ul> -->
+			<div class="col-lg-12 workDescription">
+				<h5><i>2-year post-graduate certificate program (testing, presentations, &amp; on-site finance assignments)</i></h5>
 			</div>
 
 			<p class="col-lg-3 workName">Northeastern University</p>
 			<p class="col-lg-2 workDates">Boston, 2002-2007</p>
 			<p class="col-lg-6 workType">B.S. Business Administration</p>
 			<div class="col-lg-12 workDescription">
-			<ul>
-				<li>Dual concentrations in Finance &amp; Investments; Accounting</li>
-				<li>4-year Athletic Scholarship, Men's Varsity Hockey 2002-2006 (NCAA D-1)</li>
-				<li>Participating founder of Varsity Squash program 2005-2007</li>
-			</ul>
+				<ul>
+					<li>Dual concentrations in Finance &amp; Investments; Accounting</li>
+					<li>4-year Athletic Scholarship, Men's Varsity Hockey 2002-2006 (NCAA D-1)</li>
+					<li>Participating founder of Varsity Squash program 2005-2007</li>
+				</ul>
 			</div>
 		</div>
 	</section>
@@ -204,11 +119,10 @@
 		</div>
 	</section>
 <hr>
-	<section>
+	<section ng-repeat="stuff in extracurricularStuff">
 		<h3>&sstarf;</h3>
-		<h3>Extracurricular interests</h3>
-		<p class="col-lg-12 workDescription">Hockey | Squash Racquets (Singles/Doubles) | Biking | Hiking | Travel | Swimming | Skiing | Web Development | Investments | Economics &amp; Trade
-		</p>
+		<h3>{{stuff.title}}</h3>
+		<p class="col-lg-12 workDescription">{{stuff.desc}}</p>
 	</section>
 <hr>
 	<section>

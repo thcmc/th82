@@ -5,20 +5,25 @@
     <div class="col-md-12">
         <form class="form-horizontal" data-ng-submit="update()" novalidate>
             <fieldset>
+
+
                 <div class="form-group">
+
                     <label class="control-label" for="title">Title</label>
+
                     <div class="controls">
                         <input type="text" data-ng-model="article.title" id="title" class="form-control" placeholder="Title" required>
                     </div>
                 </div>
 
                 <div class="form-group">
+
                     <label class="control-label" for="content">Content</label>
                     <!-- <div class="controls">
                         <textarea data-ng-model="article.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
                     </div> -->
 
-                    <div class="controls" text-angular="text-angular" name="content" ng-model="article.content" ta-disabled='disabled' 
+                    <div class="controls articleContent" text-angular="text-angular" name="content" ng-model="article.content" ta-disabled='disabled' 
                         ta-toolbar="[['h1','h2','h3','bold','underline','italics','undo','redo', 'quote','p','pre','ul','ol', 'insertImage','insertLink','unlink','justifyLeft','justifyCenter','justifyRight']]">
                     </div>
 
@@ -30,6 +35,7 @@
                 <div class="form-group">
                     <input type="submit" value="Update" class="btn btn-default">
                 </div>
+
 				<div data-ng-show="error" class="text-danger">
 					<strong>{{error}}</strong>
 				</div>

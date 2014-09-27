@@ -1,55 +1,44 @@
-<img class="bg" src="modules/core/img/bg1.jpg">
-<div class="mainWrapper">
+<!-- <img class="bg" src="modules/core/img/bg1.jpg"> -->
+<div class="financeWrapper" style="margin: 75px; 0 75px 0 ">
 	<a class="timheneroty" ui-sref="home"><h1>MR. TIM M. HENEROTY</h1></a>
 
-<!-- LINKS (Internal) -->
-	<div class="row">
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".finance"><i>Professional Finance</i></a></div>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".web"><i>Freelance Developer</i></a></div>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".athletics"><i>Athletics</i></a></div>
-	</div>
+	<!-- NAV  -->
+	<nav class="row">
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".finance"><i>Professional- Corporate Finance</i></a></div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".web"><i>Enthusiast- Freelance Developer</i></a></div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".athletics"><i>Career- Athlete</i></a></div>
+	</nav>
 
-	<div class="row mainContent">
+	<div class="row mainContent">	
 
 		<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 articleFeature" > 
 			<ui-view>
 
-	<!-- ARTICLE LISTING -->			
-				<article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 articleFeatureList" data-ng-controller="ArticlesController" data-ng-init="find()">
+				<!-- ARTICLE LISTING -->			
+				<article class="col-lg-8 col-md-8 col-sm-7 col-xs-12 articleFeatureList" data-ng-controller="ArticlesController" data-ng-init="find()">
 				    
 				    <div class="page-header">
-				        <h3>The Latest Rumblings</h3>
-				        <h6>Software development | Hockey Coaching | Corporate Finance</h6>
+				        <h3>The Latest</h3>
+				        <!-- <h6>News | Updates | Announcements</h6> -->
 				    </div>
 
-				    <div class="list-group">
-				        <a data-ng-repeat="article in articles | limitTo:articleLimit" data-ng-href="#!/articles/{{article._id}}" class="ArticleContainer">
-				        <!-- list-group-item  -->
-				            <h6 align="left">&Star;<b> {{article.title}}</b></h6>
+				    <div class="articleList">
+				        <a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="ArticleContainer"> <!--  | limitTo:articleLimit -->
+				        
+				            <h6 align="left">{{article.created | date:'shortDate'}} --<b> {{article.title}}</b></h6>
 				        </a>
 				    </div>
-
-
-				    <a href="#!/articles" class="viewAllArticlesButton">View All Articles</a>
+				    <!-- <a href="#!/articles" class="viewAllArticlesButton">View More</a> -->
 			    </article>
 
 	<!-- ASIDE(top-right) -->
-			    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-11" >
-			    	<aside style="margin: 40px; border: 1px solid black; padding: 10px;">
-						<h6><i>Thank You For Visiting!</i><br> This site was developed using:</h6>
+			    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+			    	<aside style="margin: 12px; border: 1px solid black; padding: 10px;">
+						<h6><i>About This Site</i><br> This site was developed using:</h6>
 							<a href="http://www.meanjs.org" target="_blank"><img src="modules/core/img/brand/logo.png"></a>
 							<!-- <a ui-sref="portfolio">View my Portfolio</a> -->
 					</aside>	
 				</div>
-
-
-	<!-- VIEW SKILLS -->
-				<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks" style="border: 1px solid black; margin-top: 20px; padding: 10px;">
-					<h6><i>View Skills</h6>
-					<a ui-sref=".finance">Finance</a>
-					<a ui-sref=".web">Web</a>
-					<a ui-sref=".athletics">Athletics</a>
-				</aside>
 
 	<!-- LINKS -->
 				<aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skillLinks" style="border: 1px solid black; margin-top: 20px; padding: 10px;">
@@ -70,7 +59,7 @@
 	</div>
 </div>
 
-<footer data-ng-controller="HomeController" align="center">
+<!-- <footer class="footer" data-ng-controller="HomeController" align="center">
 	<ul data-ng-hide="authentication.user" style="list-style:none; margin-top: 240px;">
 
 		<li ui-route="/signin" ng-class="{active: $uiRoute}">

@@ -200,15 +200,6 @@ h1,h2,h3 {
 .label-default {
   background-color:#dddddd;
 }
-.page-header {
-  margin-top: 4px;
-  padding-top: 9px;
-  border-top:1px solid wheat;
-  border-bottom:1px solid wheat;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
 
 .panel-default .panel-heading {
   background-color:#f9fafb;
