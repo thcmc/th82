@@ -108,7 +108,7 @@ h4 {
     text-align: center;
 }
 .mainWrapper p { 
-    color: #061539; 
+    /*color: #061539; */
     font-family: 'Lato', sans-serif;  
 }
 .articleList {
