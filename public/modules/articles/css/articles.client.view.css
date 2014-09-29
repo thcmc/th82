@@ -58,5 +58,7 @@ u {color: #A9B2C3;
 	border: 4px outset #A9B2C3;
 }
 
-.articleFeatureList h6 {color: #7B89A3;
+.articleFeatureList h6 {
+	color: #7B89A3;
+	margin-left: 4px;
 }

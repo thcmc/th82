@@ -6,7 +6,7 @@
 	<section>
 		<div class="nav nav-pills nav-stacked">
 		  <section ng-repeat="stuff in meanStuff">
-		  	<h3>&sstarf;</h3>
+		  	
 		  	<h3>{{stuff.title}}</h3>
 		  	<p class="col-lg-12">{{stuff.desc1}}</p>
 		  	<p class="col-lg-12">{{stuff.desc2}}</p>
@@ -19,36 +19,62 @@
 		<div>
 			<section>
 				<h3>Professional Experience</h3>
-				<h3>&sstarf;</h3>
+				
 				<h3>Independent Consulting</h3><br>
 
-				<div class="row MainCompanyExperience" ng-repeat="stuff in experienceStuff">
+				<div class="col-lg-12">
+					<table class="table">  <!-- technicalCompetenciesTable -->
+						<tr ng-repeat="stuff in experienceStuff">
+							<td><b>{{stuff.workname}}</b>:</td>
+							<td>{{stuff.workdates}}</td>
+							<td>{{stuff.worktype}}</td>
+						</tr>
+					</table>
+				</div>
+
+				<!-- <div class="row MainCompanyExperience" ng-repeat="stuff in experienceStuff">
 					<p class="col-md-3 workName">{{stuff.workname}}</p>
 					<p class="col-md-2 workDates">{{stuff.workdates}}</p>
 					<p class="col-md-6 workType">{{stuff.worktype}}</p>
-					<!-- <p class="col-md-12 workDescription">{{stuff.workdesc}}</p> -->
+					
+				</div> -->
+
+				
+				<h3>Corporate Finance</h3><br>
+
+				<div class="col-lg-12 col-xs-11">
+					<table class="table">  <!-- technicalCompetenciesTable -->
+						<tr ng-repeat="stuff in corporateStuff">
+							<td><b>{{stuff.workname}}</b>:</td>
+							<td>{{stuff.workdates}}</td>
+							<td>{{stuff.worktitle}}, {{stuff.workdept}}</td>
+							<!-- <td>{{stuff.workdept}}</td> -->
+							<!-- <td>{{stuff.workdesc}}</td> -->
+						</tr>
+					</table>
 				</div>
 
-				<h3>&sstarf;</h3>
-				<h3>Corporate Finance</h3><br>
-				<div class="row MainCompanyExperience" ng-repeat="stuff in corporateStuff">
+
+
+			<!-- 	<div class="row MainCompanyExperience" ng-repeat="stuff in corporateStuff">
 					<p class="col-lg-3 workName">{{stuff.workname}}</p>
 					<p class="col-lg-2 workDates">{{stuff.workdates}}</p>
 					<p class="col-lg-3 workType">{{stuff.worktitle}}</p>
 					<p class="col-lg-4 workType">{{stuff.workdept}}</p>
 					<p class="col-lg-12 workDescription">{{stuff.workdesc}}</p>
+				</div> -->
 
-				</div>
+
 			</section>
 		</div>
 	</section>
 <br>
 <hr>
 	<section>
-		<h3>&sstarf;</h3>
+		
 		<h3>Technical competencies</h3>
 		<div class="col-lg-12">
-			<table class="technicalCompetenciesTable">
+			<table class="table">  <!-- technicalCompetenciesTable -->
 				<tr ng-repeat="stuff in technicalStuff">
 					<td><b>{{stuff.category}}</b>:</td>
 					<td>{{stuff.skill}}</td>
@@ -56,69 +82,62 @@
 			</table>
 		</div>
 	</section>
+
 <hr>
 	<section>
-		<h3>&sstarf;</h3>
 		<h3>Education</h3>
-		<div class="row MainCompanyExperience" ng-repeat="stuff in educationStuff">
-			<p class="col-lg-3 workName">General Electric</p>
-			<p class="col-lg-2 workDates">CT, 2007-2009</p>
-			<p class="col-lg-6 workType">Financial Management Program</p>
+		<div class="row " ng-repeat="stuff in educationStuff">  <!-- MainCompanyExperience -->
+			
+			<p class="col-lg-4 workName">{{stuff.name}}</p>
+			<p class="col-lg-2 workDates">{{stuff.timeframe}}</p>
+			<p class="col-lg-6 workType"><small>{{stuff.desc1}}</small></p>
 			<div class="col-lg-12 workDescription">
-				<h5><i>2-year post-graduate certificate program (testing, presentations, &amp; on-site finance assignments)</i></h5>
-			</div>
-
-			<p class="col-lg-3 workName">Northeastern University</p>
-			<p class="col-lg-2 workDates">Boston, 2002-2007</p>
-			<p class="col-lg-6 workType">B.S. Business Administration</p>
-			<div class="col-lg-12 workDescription">
-				<ul>
-					<li>Dual concentrations in Finance &amp; Investments; Accounting</li>
-					<li>4-year Athletic Scholarship, Men's Varsity Hockey 2002-2006 (NCAA D-1)</li>
-					<li>Participating founder of Varsity Squash program 2005-2007</li>
+				<ul style="list-style: none;">
+					<li><i>{{stuff.desc2}}</i></li>
+					<li><i>{{stuff.desc3}}</i></li>
 				</ul>
 			</div>
 		</div>
 	</section>
 <hr>
+
 	<section>
-		<h3>&sstarf;</h3>
 		<h3>Ongoing professional education</h3>
 		<div class="row MainCompanyExperience">
 			<p class="col-lg-12 workDescription"></p>
 			<!-- -->
-			<p class="col-lg-3 workName">Codeschool.com</p>
+			<p class="col-lg-4 workName">Codeschool.com</p>
 			<p class="col-lg-2 workDates">2014-Present</p>
-			<p class="col-lg-6 workType">Javascript, Angular.js, Node.js, Google API's</p>
+			<p class="col-lg-6 workType"><small>Javascript, Angular.js, Node.js, Google API's</small></p>
 			<p class="col-lg-12 workDescription"> </p>
 			<!-- -->
-			<p class="col-lg-3 workName">Egghead.io</p>
+			<p class="col-lg-4 workName">Egghead.io</p>
 			<p class="col-lg-2 workDates">2014-Present</p>
-			<p class="col-lg-6 workType">Angular.js, Node.js, D3.js</p>
+			<p class="col-lg-6 workType"><small>Angular.js, Node.js, D3.js</small></p>
 			<p class="col-lg-12 workDescription"> </p>
 
 			<!-- -->
-			<p class="col-lg-3 workName">Harvard Extension School CS-70</p>
+			<p class="col-lg-4 workName">Harvard Extension School CS-70</p>
 			<p class="col-lg-2 workDates">2012</p>
-			<p class="col-lg-6 workType">Building Dynamic Websites</p>
+			<p class="col-lg-6 workType"><small>Building Dynamic Websites</small></p>
 			<p class="col-lg-12 workDescription">Profession David Mylan's class on technology and development of web applications.</p>
 		</div>
 	</section>
 <hr>
 	<section ng-repeat="stuff in extracurricularStuff">
-		<h3>&sstarf;</h3>
+		
 		<h3>{{stuff.title}}</h3>
 		<p class="col-lg-12 workDescription">{{stuff.desc}}</p>
 	</section>
 <hr>
 	<section>
 		<br>
-		<h3>&sstarf;</h3>
+		
 		<h3>References available upon request</h3>
 	</section>
 	<section>
 		<br>
-		<h3>&sstarf;</h3>
+		
 		<h3><a href="tel:+14124478555">(412)447-8555</a></h3>
 	</section>
 </div>

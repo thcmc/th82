@@ -27,37 +27,37 @@ angular.module('core')
         {
           workname: 'Creative Monster Consulting',
           workdates: '2011-Present',
-          worktype: 'Entreprenurial startup;  Business Management, IT Consulting;  Digital + Print Advertising;  Outsourcing; Independent Business Finances and Ops;',
-          workdesc: 'Revenue Growth, Business Management, Web Technology, Advertising, '
+          worktype: 'IT & Business Management Consulting',
+          workdesc: ''
         },
         {
           workname: 'Catholic Youth Association',
           workdates: '2012-Present',
-          worktype: 'Data Process Setup; Data Analysis; Reporting; Multiple Professional Websites with Drupal content managment systems;',
-          workdesc: 'Data collection endpoint setup; Data Analysis; External reporting (United Way); Multiple professional websites with Drupal content management system;'
+          worktype: 'Data Processes, Financial & Business Analysis, Internal/External Reporting, IT Consulting, Digital & Print Advertising, Social Media Management, Web Development',
+          workdesc: ''
         },
         {
           workname: 'East End Eatz',
           workdates: '2014-Present',
-          worktype: 'Professional Website; Content Management Application back-end;  Custom graphic design;  Social media set-up and training;  Growth advisory',
-          workdesc: 'tech setup including nodejs and angularjs, facebook pages, social media marketing strategies'
+          worktype: 'Application Development, Digital & Print Advertising, Content Development,  Graphic design,  Social media Management, Business Advisory',
+          workdesc: ''
         },
         {
           workname: 'Albert\'s Lounge',
           workdates: '2014',
-          worktype: 'Professional website; Advertising; Graphic Design',
+          worktype: 'Web Development, Content Development, Social Media Management, Business Advisory',
           workdesc: ''
         },
         {
           workname: 'G.A.S.S. Hockey',
           workdates: '2013',
-          worktype: 'Professional website; Advertising; Assisting On-ice instruction',
+          worktype: 'Hockey Instruction, Web Development, Content Development, Print & Digital Advertising',
           workdesc: ''
         },
         {
           workname: 'Upstairs Audio',
           workdates: '2012',
-          worktype: 'Wordpress CMS set-up and training; Custom graphic design; Technology Training',
+          worktype: 'Graph Design,  Wordpress Training',
           workdesc: ''
         }
       ]);
@@ -117,35 +117,21 @@ angular.module('core')
     this.getEducationStuff = function () {
       return ([
         {
-         institution: 'General Electric / Gexpro, Shelton CT',
-         dates: '2007-2009',
+         name: 'General Electric / Gexpro | CT, IL, TX',
+         timeframe: '2007-2009',
          desc1: '2-year post-graduate certificate program (testing, presentations, & on-site finance assignments)',
-         desc2: '-',
-         desc3: '-'
+         desc2: '',
+         desc3: ''
         },
         {
-         institution: 'Northeastern University, Boston MA',
-         dates: '2002-2007',
+         name: 'Northeastern University | Boston MA',
+         timeframe: '2002-2007',
          desc1: 'B.S. Finance and Investments; Accounting',
-         desc2: '4-year Athletic Scholarship, Men\'s Varsity Hockey 2002-2006 (NCAA D-1)',
-         desc3: 'Participating founder of Varsity Squash program 2005-2007'
+         desc2: '-  4-year Athletic Scholarship, Men\'s Varsity Hockey 2002-2006 (NCAA D-1)',
+         desc3: '-  Participating founder of Varsity Squash program 2005-2007'
         }
       ]);
     };
-    // this.getOngoingStuff = function () {
-    //   return ([
-    //     {
-    //      institution: '',
-    //      dates: '',
-    //      desc: '' 
-    //     },
-    //     {
-    //      institution: '',
-    //      dates: '',
-    //      desc: '' 
-    //     }
-    //   ]);
-    // };
     this.getExtracurricularStuff = function () {
       return ([
         {

@@ -1,8 +1,29 @@
 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication', 'financeService', function ($scope, Authentication, financeService) {
+angular.module('core').controller('HomeController', ['$scope', 'Authentication', 'financeService', 'athleticsService', 'webService', function ($scope, Authentication, financeService, athleticsService, webService) {
     $scope.authentication = Authentication;
 
+    /* ------------------------------------------------------------------------------------------webService */
+    $scope.websiteStuff = {};
+    try {
+      $scope.websiteStuff = webService.getWebsiteStuff();
+    } catch (error) {
+      console.error(error);
+    }
+    /* ------------------------------------------------------------------------------------------athleticsService */
+    $scope.hockeyPlayerAffiliates = {};
+    try {
+      $scope.hockeyPlayerAffiliates = athleticsService.getHockeyPlayerAffiliates();
+    } catch (error) {
+      console.error(error);
+    }
+    $scope.hockeyCoachingAffiliates = {};
+    try {
+      $scope.hockeyCoachingAffiliates = athleticsService.getHockeyCoachingAffiliates();
+    } catch (error) {
+      console.error(error);
+    }
+    /* ------------------------------------------------------------------------------------------financeService */
     $scope.meanStuff = {};
     try {
       $scope.meanStuff = financeService.getMeanStuff();
@@ -27,9 +48,9 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
     } catch (error) {
       console.error(error);
     }
-    $scope.eductionStuff = {};
+    $scope.educationStuff = {};
     try {
-      $scope.eductionStuff = financeService.getEducationStuff();
+      $scope.educationStuff = financeService.getEducationStuff();
     } catch (error) {
       console.error(error);
     }

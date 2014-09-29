@@ -11,11 +11,17 @@
 <h3>Websites and web-based applications</h3>
 
 
-<section id="portfolio" ng-controller="ModalDemoCtrl">
+<section id="portfolio" ng-controller="HomeController">
         <div class="row">
-            <div class="row">
 
-            <!-- ITEM 1 -->
+            <div class="row" ng-repeat="stuff in websiteStuff">
+                <div class="col-lg-11 portfolio-item">
+                    <div class="portfolio-link" >
+                        <img src="{{stuff.screenshotimg}}" class="img-responsive" alt="" align="center" />
+                        <a href="{{stuff.url}}"target="_blank"><i class="fa fa-external-link"><small>{{stuff.address}}</small></i></a>
+                    </div>
+                </div>
+<!-- 
             	<div class="col-lg-4 portfolio-item" ng-click="open()">
                     <div class="portfolio-link">
                         <img src="modules/core/img/portfolio/screenshot-alberts.png" class="img-responsive" alt="" />
@@ -23,7 +29,6 @@
                     </div>
                 </div>
 
-            <!-- ITEM 2 -->
                 <div class="col-lg-4 portfolio-item" ng-click="open()">
                     <div class="portfolio-link">
                         <img src="modules/core/img/portfolio/screenshot-eee.png" class="img-responsive" alt="" />
@@ -31,7 +36,6 @@
                     </div>
                 </div>
 
-            <!-- ITEM 3 -->
                 <div class="col-lg-4 portfolio-item" ng-click="open()">
                     <div class="portfolio-link">
                         <img src="modules/core/img/portfolio/screenshot-cmc.png" class="img-responsive" alt="" />
@@ -39,7 +43,6 @@
                     </div>
                 </div>
 
-            <!-- ITEM 4 -->
                 <div class="col-lg-4 portfolio-item" ng-click="open()">
                     <div class="portfolio-link">
                         <img src="modules/core/img/portfolio/screenshot-cyahomepage.png" class="img-responsive" alt="" />
@@ -47,7 +50,6 @@
                     </div>
                 </div>
 
-             <!-- ITEM 5 -->
                 <div class="col-lg-4 portfolio-item" ng-click="open()">
                     <div class="portfolio-link">
                         <img src="modules/core/img/portfolio/screenshot-gass.png" class="img-responsive" alt="" />
@@ -55,13 +57,12 @@
                     </div>
                 </div>
 
-            <!-- ITEM 6 -->
                 <div class="col-lg-4 portfolio-item" ng-click="open()">
                     <div class="portfolio-link">
                         <img src="modules/core/img/portfolio/screenshot-ua.png" class="img-responsive" alt="" />
                         <a href="http://www.upstairsaudio.com"target="_blank"><i class="fa fa-external-link"><small>www.upstairsaudio.com</small></i></a>
                     </div>
-                </div>
+                </div> -->
 
 
             </div>
