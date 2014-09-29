@@ -1,8 +1,14 @@
 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication', 'financeService', 'athleticsService', 'webService', function ($scope, Authentication, financeService, athleticsService, webService) {
+angular.module('core').controller('HomeController', ['$scope', 'Authentication', 'financeService', 'athleticsService', 'webService', 'socialService', function ($scope, Authentication, financeService, athleticsService, webService, socialService) {
     $scope.authentication = Authentication;
-
+    
+    $scope.socialMedia = {};
+    try {
+      $scope.socialMedia = socialService.getSocialMedia();
+    } catch (error) {
+      console.error(error);
+    }
     /* ------------------------------------------------------------------------------------------webService */
     $scope.websiteStuff = {};
     try {
