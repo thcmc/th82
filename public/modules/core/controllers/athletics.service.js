@@ -17,7 +17,7 @@ angular.module('core')
         },
         {
           name: 'Pittsburgh Penguins Elite AAA U18',
-          timeframe: '2011 - Present',
+          timeframe: '2011 - 2014',
           league: 'T1EHL',
           level: 'AAA',
           city: 'Pittsburgh',

@@ -6,9 +6,9 @@ angular.module('core')
       return ([
         {
           title: 'Performance Profile',
-          desc1: 'Senior financial analyst experienced in delivering efficient operational financial management for multinational and domestic Fortune 500 companies through high-impact business analysis, strategic planning, financial modeling, and accounting.',
-          desc2: 'Small business operator providing business intelligence, technology, and advisory services for community-based businesses and non-profit organizations.',
-          desc3: 'Community resource helping local athletes with hockey skill development, coaching, and mentoring.',
+          desc1: 'Senior financial analyst experienced in delivering efficient operational financial management through high-impact business analysis, strategic planning, financial modeling, and accounting.',
+          desc2: 'Small business operator providing business intelligence, technology, and advisory services for community-based businesses and nonprofits.',
+          desc3: 'Hockey instructor with 15+ years of player development and coaching experience.',
           desc4: '',
           url: 'http://www.#.org'
         },
@@ -57,7 +57,7 @@ angular.module('core')
         {
           workname: 'Upstairs Audio',
           workdates: '2012',
-          worktype: 'Graph Design,  Wordpress Training',
+          worktype: 'Graphic Design,  Wordpress Training',
           workdesc: ''
         }
       ]);
@@ -82,7 +82,7 @@ angular.module('core')
           workname: 'General Electric / Gexpro',
           workdates: '2007-2010',
           worktitle: 'Financial Analyst / Management Trainee',
-          workdept: 'Financial Management Program',
+          workdept: 'Financial Management Program (FMP) / Distribution Finance Leadership Program (DFLP)',
           workdesc: ''
         },  
         {
@@ -124,7 +124,7 @@ angular.module('core')
          desc3: ''
         },
         {
-         name: 'Northeastern University | Boston MA',
+         name: 'Northeastern University | Boston, MA',
          timeframe: '2002-2007',
          desc1: 'B.S. Finance and Investments; Accounting',
          desc2: '-  4-year Athletic Scholarship, Men\'s Varsity Hockey 2002-2006 (NCAA D-1)',
