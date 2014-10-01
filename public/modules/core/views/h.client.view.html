@@ -73,7 +73,7 @@
 				<div class="row mainContent" ng-controller="HomeController">	
 					<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 socialIconsList" >
 						<ul ng-repeat="link in socialMedia" style="list-style: none; display: inline-block;">
-							<li><a href="{{link.url}}" target="_blank"><i class="internalLink {{link.icon}}"></i></a></li>
+							<li class="internalLink"><a href="{{link.url}}" target="_blank"><i class="{{link.icon}}"></i></a></li>
 						</ul>
 					</section>
 				</div>

@@ -56,6 +56,8 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 			});
 		};
 
+
+		
 		$scope.numLimit=10;
 
 		$scope.articleLimit=5;
