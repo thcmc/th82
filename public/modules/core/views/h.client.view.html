@@ -54,7 +54,7 @@
 				    <div class="articleList">
 				        <a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="ArticleContainer"> <!--  | limitTo:articleLimit -->
 				            <h6 align="left">{{article.created | date:'shortDate'}} --<b> {{article.title}}</b></h6>
-				           	
+
 				    </div>
 			    </article>
 
@@ -73,7 +73,7 @@
 				<div class="row mainContent" ng-controller="HomeController">	
 					<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 socialIconsList" >
 						<ul ng-repeat="link in socialMedia" style="list-style: none; display: inline-block;">
-							<li><a href="{{link.url}}" target="_blank"><i class="internalLink img-responsive {{link.icon}}"></i></a></li>
+							<li><a href="{{link.url}}" target="_blank"><i class="internalLink {{link.icon}}"></i></a></li>
 						</ul>
 					</section>
 				</div>
