@@ -49,11 +49,7 @@ h4 {
     color: #FFE3AA; 
     cursor: pointer;
 }
-.aboutSite {
-    margin: 12px; 
-    border: 1px solid black; 
-    padding: 10px;
-}
+
 
 .skillLinks {
     border: 1px solid black; 
@@ -103,6 +99,33 @@ h4 {
     font-family: 'Poiret One', cursive; }
 .timheneroty:hover {color: #061539;}
 
+.socialIconsList {
+    margin: 12px;
+
+    background-color: rgba(0,0,0,.3);
+    padding: 20px;
+    border: 4px outset #A9B2C3;
+}
+.aboutSite {
+    margin: 12px; 
+    border: 4px outset #A9B2C3;
+    padding: 20px;
+    background-color: rgba(0,0,0,.3);
+}
+.articleFeatureList {
+    margin: 12px;
+    background-color: rgba(250,250,250,.9);
+    padding: 20px;
+    border: 4px inset #A9B2C3;
+}
+
+.articleFeatureList h6 {
+    color: #7B89A3;
+    margin-left: 6px;
+}
+.articleFeatureList h6:hover {
+    color:#061539;
+}
 /* ----------------------------------------------------------------  General Content */
 .mainWrapper {
     text-align: center;
@@ -133,6 +156,9 @@ aside {
     padding: 10px;
 }
 
+
+
+
 .insideUI {padding: 30px;}
 
 .ArticleContainer h4, p {text-align: left;}
@@ -143,7 +169,7 @@ aside {
 
 /* ---------------------------------------------------------------- FINANCE */
 .financeWrapper {
-    background: white; 
+    background: #D8DCE4 ; /*white*/
     padding: 25px; 
     border: 2px ridge #FFE3AA; 
     box-shadow: 10px 10px 5px #000000;

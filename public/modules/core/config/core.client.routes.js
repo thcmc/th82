@@ -14,7 +14,8 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		}).
 		state('home.finance', {
 			url: 'finance',
-			templateUrl: 'modules/core/views/h.client.view.finance.html'
+			templateUrl: 'modules/core/views/h.client.view.finance.html',
+			requireLogin: true
 		}).
 		state('home.web', {
 			url: 'web',

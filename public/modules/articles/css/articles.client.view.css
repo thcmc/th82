@@ -53,12 +53,14 @@ u {color: #A9B2C3;
 
 .articleFeatureList {
 	margin: 12px;
-	background-color: rgba(0,0,0,.9);
+
+	/*background-color: rgba(0,0,0,.9);*/
 	padding: 20px;
 	border: 4px outset #A9B2C3;
 }
 
 .articleFeatureList h6 {
 	color: #7B89A3;
-	margin-left: 4px;
+	margin-left: 6px;
 }
+

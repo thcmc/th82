@@ -202,7 +202,7 @@ h1,h2,h3 {
 }
 
 .panel-default .panel-heading {
-  background-color:#f9fafb;
+  background-color:#BDDC45;  /*f9fafb*/
   color:#555555;
 }
 
@@ -285,3 +285,14 @@ small.text-muted {
     padding-left:3px;
   }
 }
+
+.open > .dropdown-menu {
+  z-index: 1;
+}
+
+
+
+
+
+
+

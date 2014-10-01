@@ -1,8 +1,37 @@
 <!-- <img class="bg" src="modules/core/img/bg1.jpg"> -->
 
-<div class="financeWrapper" style="margin: 5px 0 5px 0;">
+<div class="container" data-ng-controller="HeaderController">
+	<div data-ng-show="authentication.user">
+		<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+			<ul class="nav navbar-nav navbar-right" >
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<span data-ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="/#!/settings/profile">Edit Profile</a>
+						</li>
+						<li>
+							<a href="/#!/settings/accounts">Manage Social Accounts</a>
+						</li>
+						<li data-ng-show="authentication.user.provider === 'local'">
+							<a href="/#!/settings/password" >Change Password</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="/auth/signout" >Signout</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<div class="financeWrapper" style="margin: 50px 0 5px 0;">
 	
-	<a class="timheneroty" ui-sref="home"><h1>MR. TIM M. HENEROTY</h1></a>
+	<a class="timheneroty" ui-sref="home"><h1><b>MR. TIM M. HENEROTY</b></h1></a>
 
 	<!-- NAV  -->
 	<nav class="row">
@@ -18,19 +47,19 @@
 			<ui-view>
 
 				<!-- ARTICLE LISTING -->			
-				<article class="col-lg-8 col-md-8 col-sm-7 col-xs-12 articleFeatureList" data-ng-controller="ArticlesController" data-ng-init="find()">
+				<article class="col-lg-12 col-md-12 col-sm-12 col-xs-12 articleFeatureList" data-ng-controller="ArticlesController" data-ng-init="find()">
 				    <div class="page-header">
 				        <h3>The Latest</h3><!-- <h6>News | Updates | Announcements</h6> -->
 				    </div>
 				    <div class="articleList">
 				        <a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="ArticleContainer"> <!--  | limitTo:articleLimit -->
 				            <h6 align="left">{{article.created | date:'shortDate'}} --<b> {{article.title}}</b></h6>
-				        </a>	
+				           	
 				    </div>
 			    </article>
 
 				<!-- ABOUT THIS SITE -->
-			    <div align="center" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+			    <!-- div align="center" class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
 			    	<aside class="aboutSite">
 						<h6><i>About This Site</i>
 						<br>
@@ -38,27 +67,16 @@
 						</h6>
 						<a href="http://www.meanjs.org" target="_blank"><img src="modules/core/img/brand/logo.png"></a>
 					</aside>	
-				</div>
+				</div> -->
 				
 				<!-- SOCIAL LINKS -->
 				<div class="row mainContent" ng-controller="HomeController">	
-					<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+					<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 socialIconsList" >
 						<ul ng-repeat="link in socialMedia" style="list-style: none; display: inline-block;">
-							<li><a href="{{link.url}}" target="_blank"><i class="{{link.icon}}"></i></a></li>
+							<li><a href="{{link.url}}" target="_blank"><i class="internalLink img-responsive {{link.icon}}"></i></a></li>
 						</ul>
 					</section>
 				</div>
-				
-
-				<section class="col-lg-11 col-md-11 col-sm-11 col-xs-12">
-
-					<!-- This is filler -- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
-				</section>
 
 			</ui-view>
 

@@ -1,31 +1,19 @@
 'use strict';
 
 // Portfolios controller
-angular.module('portfolios').controller('PortfoliosController', ['$scope', '$stateParams', '$location', 'Authentication', 'Portfolios',
-	function($scope, $stateParams, $location, Authentication, Portfolios ) {
+angular.module('portfolios').controller('PortfoliosController', ['$scope', '$stateParams', '$location', 'Authentication', 'Portfolios', 'GitHub',
+	function($scope, $stateParams, $location, Authentication, Portfolios, GitHub) {
+		
+
 		$scope.authentication = Authentication;
 
 
-		$scope.categories = [
-			{id: 0, name: 'Graphics'},
-			{id: 1, name: 'Photography'},
-			{id: 2, name: 'Wordpress'},
-			{id: 3, name: 'Joomla'},
-			{id: 4, name: 'Custom Websites'},
-			{id: 5, name: 'Applications'},
-			{id: 6, name: 'Video'},
-			{id: 7, name: 'Music/Other Multimedia'},
-		];
+		$scope.data = {};
 
-		$scope.items = [
-			{id: 0, title: 'a', desc: 'descr1', src:'src0', category: 'Graphics'},
-			{id: 1, title: 'b', desc: 'descr2', src:'src1', category: 'Photography'},
-			{id: 2, title: 'c', desc: 'descr3', src:'src2', category: 'Wordpress'},
-			{id: 3, title: 'd', desc: 'descr4', src:'src3', category: 'Joomla'},
-			{id: 4, title: 'e', desc: 'descr5', src:'src4', category: 'Custom Websites'},
-			{id: 5, title: 'f', desc: 'descr6', src:'src5', category: 'Applications'},
-			{id: 6, title: 'g', desc: 'descr7', src:'src6', category: 'Music/Other Multimedia'},
-		];
+		GitHub.query(function(response){
+			$scope.data.repos = response;
+		});
+
 
 		// Create new Portfolio
 		$scope.create = function() {

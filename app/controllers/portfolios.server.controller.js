@@ -3,9 +3,9 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-	Portfolio = mongoose.model('Portfolio'),
-	_ = require('lodash');
+var mongoose 	= require('mongoose'),
+	Portfolio 	= mongoose.model('Portfolio'),
+	_ 			= require('lodash');
 
 /**
  * Get the error message from error object

@@ -248,6 +248,14 @@ exports.requiresLogin = function(req, res, next) {
 	next();
 };
 
+// exports.checkAdmin = function(req, res, next) {
+// 	if (req.user.roles == 'admin') {
+		
+// 	} 
+
+// 	next();
+// }
+
 /**
  * User authorizations routing middleware
  */

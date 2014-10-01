@@ -15,9 +15,9 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-				'public/modules/core/css/bootstrap.css',
+				// 'public/modules/core/css/bootstrap.css',
 				'public/modules/core/css/home3.css',
-				'//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css',
+				'//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
 				'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300',
 				'https://fonts.googleapis.com/css?family=Megrim',
 				'https://fonts.googleapis.com/css?family=Rosarivo',

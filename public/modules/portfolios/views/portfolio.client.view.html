@@ -1,110 +1,105 @@
-<!-- <div class="row">
-	
-	<section class="col-md-3 leftNavPortfolio">
-		Pull Left
-	</section>
-	<section class="col-md-9 portfolioContainer">
-		Pull right
-	</section>
 
-
-</div> -->
 <div class="wrapper">
-    <div class="box">
-        <div class="row row-offcanvas row-offcanvas-left">
+    <div class="box" >
+        <div class="row row-offcanvas row-offcanvas-left" >
                       
           
             <!-- sidebar -->
-            <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+            <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar" ng-controller="PortfoliosController">
               
-              	<ul class="nav">
+            <!--   <ul class="nav">
           			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-            	</ul>
+            	</ul> -->
                
                 <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> Featured</a></li>
-                    <li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Stories</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Saved</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-refresh"></i> Refresh</a></li>
-                </ul>
-                <ul class="list-unstyled hidden-xs" id="sidebar-footer">
-                    <li>
-                      <a href="http://www.bootply.com"><h3>Bootstrap</h3> <i class="glyphicon glyphicon-heart-empty"></i> Bootply</a>
+                    <li><a ui-sref="home"><i class="fa fa-home fa-2x"></i> Homepage</a></li>
+                    <li data-ng-show="authentication.user"><a ui-sref="createArticle"><i class="fa fa-file-o"></i>  new article</a></li>
+
+                    <li class="dropdown" data-ng-show="authentication.user">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Account <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/#!/settings/profile">Edit Profile</a></li>
+                        <li><a href="/#!/settings/accounts">Manage Social Accounts</a></li>
+                        <li data-ng-show="authentication.user.provider === 'local'"><a href="/#!/settings/password">Change Password</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/auth/signout">Signout</a></li>
+                      </ul>
                     </li>
                 </ul>
-              
+
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer" data-ng-hide="authentication.user">
+                   
+                   <li ui-route="/signin" ng-class="{active: $uiRoute}"><a href="/#!/signin"><i class="fa fa-header fa-2x"></i></a></li>
+
+                </ul>
+
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer" data-ng-show="authentication.user">
+                  <li><i class="text-muted">logged in as:</i></li>
+                  <li>{{authentication.user.displayName}}</li> 
+
+                </ul>
+
+
               	<!-- tiny only nav-->
               <ul class="nav visible-xs" id="xs-menu">
-                  	<li><a href="#featured" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
-                    <li><a href="#stories" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
-                  	<li><a href="#" class="text-center"><i class="glyphicon glyphicon-paperclip"></i></a></li>
-                    <li><a href="#" class="text-center"><i class="glyphicon glyphicon-refresh"></i></a></li>
-                </ul>
-              
+              	<li><a ui-sref="home" class="text-center"><i class="fa fa-home fa-2x"></i></a></li>
+                <li ui-route="/signin" ng-class="{active: $uiRoute}" data-ng-hide="authentication.user"><a class="text-center" href="/#!/signin"><i class="fa fa-header fa-2x"></i></a></li>
+
+                <li data-ng-show="authentication.user"><a href="/#!/settings/profile">Edit Profile</a></li>
+                <li data-ng-show="authentication.user"><a href="/#!/settings/accounts">Manage Social Accounts</a></li>
+                <li data-ng-show="authentication.user.provider === 'local'"><a href="/#!/settings/password">Change Password</a></li>
+                <li data-ng-show="authentication.user" class="divider"></li>
+                <li data-ng-show="authentication.user"><a href="/auth/signout">Signout</a></li>
+              </ul>
+ 
             </div>
             <!-- /sidebar -->
           
             <!-- main right col -->
-            <div class="column col-sm-10 col-xs-11" id="main">
+            <div class="column col-sm-10 col-xs-11" id="main" style=" background-image: url('modules/core/img/bg1.jpg');">
                 
                 <!-- top nav -->
-              	<div class="navbar navbar-blue navbar-static-top">  
+              	<!-- <div class="navbar navbar-blue navbar-static-top">  
                     <div class="navbar-header">
                       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle</span>
                         <span class="icon-bar"></span>
-          				<span class="icon-bar"></span>
-          				<span class="icon-bar"></span>
+          				      <span class="icon-bar"></span>
+          				      <span class="icon-bar"></span>
                       </button>
-                      <a href="/" class="navbar-brand logo">b</a>
+                      <a href="/" class="navbar-brand logo">TH</a>
                   	</div>
+
                   	<nav class="collapse navbar-collapse" role="navigation">
-                    <form class="navbar-form navbar-left">
-                        <div class="input-group input-group-sm" style="max-width:360px;">
-                          <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                          <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                      <form class="navbar-form navbar-left">
+                          <div class="input-group input-group-sm" style="max-width:360px;">
+                            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                            <div class="input-group-btn">
+                              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
                           </div>
-                        </div>
-                    </form>
-                    <ul class="nav navbar-nav">
-                      <li>
-                        <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a>
-                      </li>
-                      <li>
-                        <a href="#postModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i> Post</a>
-                      </li>
-                      <li>
-                        <a href="#"><span class="badge">badge</span></a>
-                      </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="">More</a></li>
-                          <li><a href="">More</a></li>
-                          <li><a href="">More</a></li>
-                          <li><a href="">More</a></li>
-                          <li><a href="">More</a></li>
-                        </ul>
-                      </li>
-                    </ul>
+                      </form>
+                      <ul class="nav navbar-nav">
+                        <li>
+                          <a ui-sref="home"><i class="fa fa-home"></i> Home</a>
+                        </li>
+                      </ul>
                   	</nav>
-                </div>
+                </div> -->
                 <!-- /top nav -->
               
                 <div class="padding">
                     <div class="full col-sm-9">
                       
                         <!-- content -->                      
-                      	<div class="row">
+                      	<div class="row" >
                           
                          <!-- main col left --> 
                          <div class="col-sm-5">
-                           
-                              <div class="panel panel-default">
-                                <div class="panel-thumbnail"><img src="/assets/example/bg_5.jpg" class="img-responsive"></div>
+                         <div style="margin-right: 10px;">
+
+                              <div class="panel panel-default" >
+                                <div class="panel-thumbnail"><img src="" class="img-responsive"></div>
                                 <div class="panel-body">
                                   <p class="lead">Urbanization</p>
                                   <p>45 Followers, 13 Posts</p>
@@ -115,14 +110,13 @@
                                 </div>
                               </div>
 
-                           
-                              <div class="panel panel-default">
-                                <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Bootstrap Examples</h4></div>
+                              <!-- ARTICLES LIST -->
+                              <div class="panel panel-default" data-ng-controller="ArticlesController" data-ng-init="find()">
+                                <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4><i class="fa fa-newspaper-o"></i> News &amp; Updates</h4></div>
                                   <div class="panel-body">
-                                    <div class="list-group">
-                                      <a href="http://bootply.com/tagged/modal" class="list-group-item">Modal / Dialog</a>
-                                      <a href="http://bootply.com/tagged/datetime" class="list-group-item">Datetime Examples</a>
-                                      <a href="http://bootply.com/tagged/datatable" class="list-group-item">Data Grids</a>
+
+                                     <div class="list-group" ng-repeat="article in articles">
+                                      <a data-ng-href="#!/articles/{{article._id}}" class="list-group-item">{{article.title}}  <i><small>{{article.created | date:'shortDate'}}</small></i></a>
                                     </div>
                                   </div>
                               </div>
@@ -153,15 +147,14 @@
                                	<div class="panel-body">
                                 	Bootstrap is front end frameworkto build custom web applications that are fast, responsive &amp; intuitive. It consist of CSS and HTML for typography, forms, buttons, tables, grids, and navigation along with custom-built jQuery plug-ins and support for responsive layouts. With dozens of reusable components for navigation, pagination, labels, alerts etc..                          </div>
                               </div>
-
-                           		
-                           
+                          </div>    
                           </div>
                           
                           <!-- main col right -->
                           <div class="col-sm-7">
                                
-                                <div class="well"> 
+                               <!-- -->
+                               <!--  <div class="well"> 
                                    <form class="form">
                                     <h4>Sign-up</h4>
                                     <div class="input-group text-center">
@@ -169,18 +162,24 @@
                                       <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">OK</button></span>
                                     </div>
                                   </form>
-                                </div>
+                                </div> -->
                       
-                               <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Bootply Editor &amp; Code Library</h4></div>
+                               <div class="panel panel-default" ng-controller="PortfoliosController">
+                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4><i class="fa fa-github"></i> Github Repos</h4></div>
                                   <div class="panel-body">
-                                    <p><img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">The Bootstrap Playground</a></p>
-                                    <div class="clearfix"></div>
-                                    <hr>
-                                    Design, build, test, and prototype using Bootstrap in real-time from your Web browser. Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap. Find and showcase Bootstrap-ready snippets in the 100% free Bootply.com code repository.
+                                    <table class="table table-striped">
+                                      <tr>
+                                        <th><i>Name</i></th>
+                                        <th><i>Description</i></th>
+                                      </tr>
+                                      <tr ng-repeat="repo in data.repos">
+                                        <td>{{repo.name}}</td>
+                                        <td>{{repo.description}}</td>
+                                      </tr>
+                                    </table>
                                   </div>
                                </div>
-                            
+       
                                <div class="panel panel-default">
                                  <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Stackoverflow</h4></div>
                                   <div class="panel-body">
@@ -243,19 +242,19 @@
                           </div>
                           <div class="col-sm-6">
                             <p>
-                            <a href="#" class="pull-right">©Copyright 2013</a>
+                            <a href="#" class="pull-right">&copy; 2014</a>
                             </p>
                           </div>
                         </div>
                       
                       <hr>
-                      
+<!--                       
                       <h4 class="text-center">
-                      <a href="http://bootply.com/96266" target="ext">Download this Template @Bootply</a>
+                      <a href="#" target="ext"></a>
                       </h4>
                         
                       <hr>
-                        
+                         -->
                       
                     </div><!-- /col-9 -->
                 </div><!-- /padding -->
@@ -285,7 +284,11 @@
       <div class="modal-footer">
           <div>
           <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true">Post</button>
-            <ul class="pull-left list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+            <ul class="pull-left list-inline">
+              <li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li>
+              <li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li>
+              <li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li>
+            </ul>
 		  </div>	
       </div>
   </div>
