@@ -36,7 +36,8 @@ module.exports = {
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js',
 				'http://cdn.jsdelivr.net/g/angular.textangular@1.2.2(textAngular-sanitize.min.js+textAngular.min.js)',
-				'//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'
+				// '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'
+				'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'
 
 			]
 		},

@@ -200,11 +200,7 @@ h1,h2,h3 {
 .label-default {
   background-color:#dddddd;
 }
-
-.panel-default .panel-heading {
-  background-color:#BDDC45;  /*f9fafb*/
-  color:#555555;
-}
+.panel-heading {background-color: red!important;}
 
 .col-sm-9.full {
     width: 100%;

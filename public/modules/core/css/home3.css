@@ -101,10 +101,16 @@ h4 {
 
 .socialIconsList {
     margin: 12px;
-
+    text-align: center;
     background-color: rgba(0,0,0,.3);
     padding: 20px;
     border: 4px outset #A9B2C3;
+}
+.socialIconsList .fa {
+    color:#7B89A3;
+}
+.socialIconsList .fa:hover {
+    color: wheat;
 }
 .aboutSite {
     margin: 12px; 
@@ -126,6 +132,49 @@ h4 {
 .articleFeatureList h6:hover {
     color:#061539;
 }
+.asideLinksHomepage ul {
+    margin: 14px; 
+    list-style-type: none;
+}
+.asideLinksHomepage ul li{
+    margin: 12px; 
+    padding: 10px;
+    border: 2px inset #7B89A3;
+    text-align: center;
+}
+.asideLinksHomepage ul li a {
+    color: #7B89A3;
+}
+.asideLinksHomepage ul li a:hover{
+    color: wheat;  
+}
+.asideLinksHomepage .fa {
+    color: #7B89A3;
+    margin-right: 4px;
+}
+
+.asideLinksHomepagePersonal ul {
+    margin: 14px; 
+    list-style-type: none;
+   text-align: center;
+}
+.asideLinksHomepagePersonal ul li {
+    margin: 12px; 
+    padding: 10px;
+    text-align: center;
+    display: inline;
+}
+.asideLinksHomepagePersonal ul li a {
+    color:#7B89A3;
+}
+.asideLinksHomepagePersonal ul li a:hover{
+    color: wheat; 
+}
+.asideLinksHomepagePersonal .fa {
+    color: #7B89A3;
+    margin-right: 4px;
+}
+
 /* ----------------------------------------------------------------  General Content */
 .mainWrapper {
     text-align: center;

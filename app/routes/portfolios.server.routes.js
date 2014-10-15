@@ -6,11 +6,11 @@ module.exports = function(app) {
 
 	// Portfolios Routes
 	app.route('/portfolios')
-		.get(portfolios.list)
+		.get(users.requiresLogin, portfolios.list)
 		.post(users.requiresLogin, portfolios.create);
 
 	app.route('/portfolios/:portfolioId')
-		.get(portfolios.read)
+		.get(users.requiresLogin, portfolios.read)
 		.put(users.requiresLogin, portfolios.hasAuthorization, portfolios.update)
 		.delete(users.requiresLogin, portfolios.hasAuthorization, portfolios.delete);
 

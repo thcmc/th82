@@ -1,22 +1,22 @@
-'use strict';
+// 'use strict';
 
-angular.module('portfolios').factory('apiFactory', function ($http, $q){
-	return {
-		getGitHub: function () {
+// angular.module('portfolios').factory('apiFactory', function ($http, $q){
+// 	return {
+// 		getGitHub: function () {
 
-			var deferred = $q.defer();
+// 			var deferred = $q.defer();
 
-			$http.get('https://api.github.com/users/thcmc/repos').success(fucntion(data){
+// 			$http.get('https://api.github.com/users/thcmc/repos').success(fucntion(data){
 
-				deferred.resolve(data);
-			}).error(function() {
-				deferred.reject();
-			});
+// 				deferred.resolve(data);
+// 			}).error(function() {
+// 				deferred.reject();
+// 			});
 
-			return deferred.promise;
-		}
-	}
-});
+// 			return deferred.promise;
+// 		}
+// 	}
+// });
 
 
 

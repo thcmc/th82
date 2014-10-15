@@ -1,8 +1,8 @@
 'use strict';
 
 // Portfolios controller
-angular.module('portfolios').controller('PortfoliosController', ['$scope', '$stateParams', '$location', 'Authentication', 'Portfolios', 'GitHub',
-	function($scope, $stateParams, $location, Authentication, Portfolios, GitHub) {
+angular.module('portfolios').controller('PortfoliosController', ['$scope', '$stateParams', '$location', 'Authentication', 'Portfolios', 'GitHub', 'sidebarnavService',
+	function($scope, $stateParams, $location, Authentication, Portfolios, GitHub, sidebarnavService) {
 		
 
 		$scope.authentication = Authentication;
@@ -13,6 +13,13 @@ angular.module('portfolios').controller('PortfoliosController', ['$scope', '$sta
 		GitHub.query(function(response){
 			$scope.data.repos = response;
 		});
+
+		$scope.sidebarLink = {};
+	    try {
+	      $scope.sidebarLink = sidebarnavService.getSideBarNavStuff();
+	    } catch (error) {
+	      console.error(error);
+	    }
 
 
 		// Create new Portfolio

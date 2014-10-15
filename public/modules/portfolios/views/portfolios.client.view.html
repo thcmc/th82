@@ -11,12 +11,19 @@
           			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
             	</ul> -->
                
-                <ul class="nav hidden-xs" id="lg-menu">
-                    <li><a ui-sref="home"><i class="fa fa-home fa-2x"></i> Homepage</a></li>
-                    <li data-ng-show="authentication.user"><a ui-sref="createArticle"><i class="fa fa-file-o"></i>  new article</a></li>
+                <ul class="nav hidden-xs" id="lg-menu" ng-repeat="link in sidebarLink"> <!-- ng-repeat="links in sidebarlinks" -->
+                    <li><a href="{{link.href}}"><i class="{{link.icon}}"></i> {{link.title}}</a></li>
+                    <!-- <li>
+                      <a ui-sref="home"><i class="fa fa-home fa-2x"></i> Homepage</a>
+                    </li>
+                    <li data-ng-show="authentication.user">
+                      <a ui-sref="createArticle"><i class="fa fa-file-o"></i>  new article</a>
+                    </li> -->
 
-                    <li class="dropdown" data-ng-show="authentication.user">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Account <b class="caret"></b></a>
+                </ul>
+                <ul class="nav hidden-xs" id="lg-menu">
+                  <li class="dropdown" data-ng-show="authentication.user">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{authentication.user.displayName}} <b class="caret"></b></a>
                       <ul class="dropdown-menu">
                         <li><a href="/#!/settings/profile">Edit Profile</a></li>
                         <li><a href="/#!/settings/accounts">Manage Social Accounts</a></li>
@@ -27,15 +34,10 @@
                     </li>
                 </ul>
 
-                <ul class="list-unstyled hidden-xs" id="sidebar-footer" data-ng-hide="authentication.user">
-                   
-                   <li ui-route="/signin" ng-class="{active: $uiRoute}"><a href="/#!/signin"><i class="fa fa-header fa-2x"></i></a></li>
-
-                </ul>
-
                 <ul class="list-unstyled hidden-xs" id="sidebar-footer" data-ng-show="authentication.user">
-                  <li><i class="text-muted">logged in as:</i></li>
-                  <li>{{authentication.user.displayName}}</li> 
+                  <li><i class="text-muted">logged In!</i></li>
+                 <!--  <li>{{authentication.user.displayName}}</li>  -->
+                  <li><a href="/auth/signout"><i class="fa fa-sign-out fa-2x"></i> Signout</a></li>
 
                 </ul>
 
@@ -111,8 +113,9 @@
                               </div>
 
                               <!-- ARTICLES LIST -->
+                              
                               <div class="panel panel-default" data-ng-controller="ArticlesController" data-ng-init="find()">
-                                <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4><i class="fa fa-newspaper-o"></i> News &amp; Updates</h4></div>
+                                <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4><i class="fa fa-newspaper-o"></i> Articles List</h4></div>
                                   <div class="panel-body">
 
                                      <div class="list-group" ng-repeat="article in articles">

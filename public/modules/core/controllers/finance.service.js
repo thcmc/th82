@@ -8,7 +8,7 @@ angular.module('core')
           title: 'Performance Profile',
           desc1: 'Senior financial analyst experienced in delivering efficient operational financial management through high-impact business analysis, strategic planning, financial modeling, and accounting.',
           desc2: 'Small business operator providing business intelligence, technology, and advisory services for community-based businesses and nonprofits.',
-          desc3: 'Hockey instructor with 15+ years of player development and coaching experience.',
+          desc3: '',
           desc4: '',
           url: 'http://www.#.org'
         },
@@ -32,7 +32,7 @@ angular.module('core')
         },
         {
           workname: 'Catholic Youth Association',
-          workdates: '2012-Present',
+          workdates: '2011-Present',
           worktype: 'Data Processes, Financial & Business Analysis, Internal/External Reporting, IT Consulting, Digital & Print Advertising, Social Media Management, Web Development',
           workdesc: ''
         },

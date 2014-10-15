@@ -36,8 +36,8 @@
 	<!-- NAV  -->
 	<nav class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".finance"><i>Professional- Corporate Finance</i></a></div>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".web"><i>Enthusiast- Freelance Developer</i></a></div>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".athletics"><i>Active- Athlete</i></a></div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".web"><i>Freelance Web Development</i></a></div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><a class="internalLink" ui-sref=".athletics"><i>Athletics</i></a></div>
 	</nav>
 
 	<div class="row mainContent">	
@@ -47,7 +47,7 @@
 			<ui-view>
 
 				<!-- ARTICLE LISTING -->			
-				<article class="col-lg-12 col-md-12 col-sm-12 col-xs-12 articleFeatureList" data-ng-controller="ArticlesController" data-ng-init="find()">
+				<article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 articleFeatureList" data-ng-controller="ArticlesController" data-ng-init="find()">
 				    <div class="page-header">
 				        <h3>The Latest</h3><!-- <h6>News | Updates | Announcements</h6> -->
 				    </div>
@@ -57,6 +57,19 @@
 
 				    </div>
 			    </article>
+
+			    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 asideLinksHomepage">
+			    	<h6>More things I like</h6>
+			    	<ul>
+			    		<li><a href="#!/books"><i class=" fa fa-book fa-2x"></i> Books</a></li>
+			    		<!-- <li><a href="#!/listlinks"><i class=" fa fa-bookmark fa-2x"></i> Links</a></li> -->
+			    		<li><a href="#!/photos"><i class=" fa fa-camera fa-2x"></i> Photos</a></li>
+			    	</ul>
+			
+			    </div>
+
+
+			 
 
 				<!-- ABOUT THIS SITE -->
 			    <!-- div align="center" class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -77,6 +90,16 @@
 						</ul>
 					</section>
 				</div>
+
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 asideLinksHomepagePersonal">
+			    	<ul>
+			    		<li><a href="#!/nutritions"><i class=" fa fa-coffee fa-2x"></i> Nutrition</a></li>
+			    		<li><a href="#!/workouts"><i class=" fa fa-compass fa-2x"></i> Workouts</a></li>
+			    		<!-- <li><a href="#!/listnotes"><i class=" fa fa-list-alt fa-2x"></i> Notes</a></li> -->
+			    		<li><a href="#!/clients"><i class=" fa fa-user-md fa-2x"></i> Client Manager</a></li>
+			    	</ul>
+			
+			    </div>
 
 			</ui-view>
 
