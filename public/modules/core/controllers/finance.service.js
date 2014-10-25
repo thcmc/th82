@@ -25,13 +25,25 @@ angular.module('core')
     this.getExperienceStuff = function () {
       return ([
         {
-          workname: 'Creative Monster Consulting',
+          workname: 'CM Consulting',
           workdates: '2011-Present',
           worktype: 'IT & Business Management Consulting',
           workdesc: ''
         },
         {
           workname: 'Catholic Youth Association',
+          workdates: '2011-Present',
+          worktype: 'Data Processes, Financial & Business Analysis, Internal/External Reporting, IT Consulting, Digital & Print Advertising, Social Media Management, Web Development',
+          workdesc: ''
+        },
+        {
+          workname: 'Stephen Foster Center',
+          workdates: '2011-Present',
+          worktype: 'Data Processes, Financial & Business Analysis, Internal/External Reporting, IT Consulting, Digital & Print Advertising, Social Media Management, Web Development',
+          workdesc: ''
+        },
+        {
+          workname: 'Art Rooney Award Dinner',
           workdates: '2011-Present',
           worktype: 'Data Processes, Financial & Business Analysis, Internal/External Reporting, IT Consulting, Digital & Print Advertising, Social Media Management, Web Development',
           workdesc: ''
@@ -106,7 +118,7 @@ angular.module('core')
         },
         {
          category: 'Creative',
-         skill: 'Adobe CS5.5 -  Fireworks | Photoshop | After Effects | Audition' 
+         skill: 'Adobe CS5.5 -  Fireworks | Photoshop | Illustrator | InDesign | After Effects | Audition' 
         },
         {
          category: 'Productivity',
@@ -117,18 +129,18 @@ angular.module('core')
     this.getEducationStuff = function () {
       return ([
         {
-         name: 'General Electric / Gexpro | CT, IL, TX',
+         name: 'General Electric / Gexpro',
          timeframe: '2007-2009',
-         desc1: '2-year post-graduate certificate program (testing, presentations, & on-site finance assignments)',
+         desc1: 'Financial Managment Program (FMP) / Distribution Finance Leadership Program (DFLP)',
          desc2: '',
          desc3: ''
         },
         {
-         name: 'Northeastern University | Boston, MA',
+         name: 'Northeastern University',
          timeframe: '2002-2007',
          desc1: 'B.S. Finance and Investments; Accounting',
-         desc2: '-  4-year Athletic Scholarship, Men\'s Varsity Hockey 2002-2006 (NCAA D-1)',
-         desc3: '-  Participating founder of Varsity Squash program 2005-2007'
+         desc2: '| Varsity Hockey 2002-2006 (NCAA D-1, Hockey East)',
+         desc3: '| Varsity Squash 2005-2007'
         }
       ]);
     };

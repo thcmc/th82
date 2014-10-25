@@ -45,8 +45,8 @@
 		<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 			
 			<ui-view>
+				<!-- ARTICLE LISTING -->	
 
-				<!-- ARTICLE LISTING -->			
 				<article class="col-lg-8 col-md-8 col-sm-8 col-xs-12 articleFeatureList" data-ng-controller="ArticlesController" data-ng-init="find()">
 				    <div class="page-header">
 				        <h3>The Latest</h3><!-- <h6>News | Updates | Announcements</h6> -->
@@ -57,20 +57,23 @@
 
 				    </div>
 			    </article>
+				
+			    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 asideLinksHomepage" data-ng-controller="HeaderController">
+			    	<!-- <h6>More things I like</h6> -->
 
-			    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 asideLinksHomepage">
-			    	<h6>More things I like</h6>
-			    	<ul>
+			    	<ul data-ng-show="authentication.user">
 			    		<li><a href="#!/books"><i class=" fa fa-book fa-2x"></i> Books</a></li>
 			    		<!-- <li><a href="#!/listlinks"><i class=" fa fa-bookmark fa-2x"></i> Links</a></li> -->
 			    		<li><a href="#!/photos"><i class=" fa fa-camera fa-2x"></i> Photos</a></li>
 			    	</ul>
 			
 			    </div>
+				
+				<div data-ng-controller="HeaderController">
+			    	<img class="col-lg-3 col-md-3 col-sm-3 col-xs-12 asideImg img-responsive"  src="modules/core/img/tim-with-goddaughter-harper-claire.jpg" alt="me with God daughter" data-ng-hide="authentication.user">
+				</div>
 
-
-			 
-
+	
 				<!-- ABOUT THIS SITE -->
 			    <!-- div align="center" class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
 			    	<aside class="aboutSite">
@@ -82,17 +85,9 @@
 					</aside>	
 				</div> -->
 				
-				<!-- SOCIAL LINKS -->
-				<div class="row mainContent" ng-controller="HomeController">	
-					<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 socialIconsList" >
-						<ul ng-repeat="link in socialMedia" style="list-style: none; display: inline-block;">
-							<li class="internalLink"><a href="{{link.url}}" target="_blank"><i class="{{link.icon}}"></i></a></li>
-						</ul>
-					</section>
-				</div>
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 asideLinksHomepagePersonal">
-			    	<ul>
+				
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 asideLinksHomepagePersonal" data-ng-controller="HeaderController">
+			    	<ul data-ng-show="authentication.user">
 			    		<li><a href="#!/nutritions"><i class=" fa fa-coffee fa-2x"></i> Nutrition</a></li>
 			    		<li><a href="#!/workouts"><i class=" fa fa-compass fa-2x"></i> Workouts</a></li>
 			    		<!-- <li><a href="#!/listnotes"><i class=" fa fa-list-alt fa-2x"></i> Notes</a></li> -->
@@ -100,6 +95,14 @@
 			    	</ul>
 			
 			    </div>
+			<!-- SOCIAL LINKS -->
+				<div class="row mainContent" ng-controller="HomeController">	
+					<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 socialIconsList" >
+						<ul ng-repeat="link in socialMedia" style="list-style: none; display: inline-block;">
+							<li class="internalLink"><a href="{{link.url}}" target="_blank"><i class="{{link.icon}}"></i></a></li>
+						</ul>
+					</section>
+				</div>
 
 			</ui-view>
 

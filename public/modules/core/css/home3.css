@@ -100,10 +100,10 @@ h4 {
 .timheneroty:hover {color: #061539;}
 
 .socialIconsList {
-    margin: 12px;
+    margin: 2px 2px 0 2px;
     text-align: center;
     background-color: rgba(0,0,0,.3);
-    padding: 20px;
+    padding: 12px 12px 0 12px;
     border: 4px outset #A9B2C3;
 }
 .socialIconsList .fa {
@@ -174,7 +174,11 @@ h4 {
     color: #7B89A3;
     margin-right: 4px;
 }
-
+.asideImg {
+    margin: 12px;
+    background-color: rgba(250,250,250,.9);
+    border: 4px inset #A9B2C3;
+}
 /* ----------------------------------------------------------------  General Content */
 .mainWrapper {
     text-align: center;
@@ -193,8 +197,8 @@ h4 {
 .mainContent {
     padding-top: 20px;
 }
-.mainContent .fa-4x {
-    margin: 4px;
+.mainContent .fa-2x {
+    margin: 4px 4px 0 4px;
 }
 
 aside img {
@@ -219,7 +223,7 @@ aside {
 /* ---------------------------------------------------------------- FINANCE */
 .financeWrapper {
     background: #D8DCE4 ; /*white*/
-    padding: 25px; 
+    padding: 25px 25px 16px 25px; 
     border: 2px ridge #FFE3AA; 
     box-shadow: 10px 10px 5px #000000;
 }

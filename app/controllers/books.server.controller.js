@@ -6,7 +6,38 @@
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors'),
 	Book = mongoose.model('Book'),
-	_ = require('lodash');
+	_ = require('lodash'),
+	googleapi = require('node-google-api')('AIzaSyAffzxPYpgZ14gieEE04_u4U-5Y26UQ8_0');
+
+
+exports.gbooks = function(req, res) {
+	googleapi.build(function(api) {
+	  for(var k in api){
+	    console.log(k);
+	  }
+	});
+	// 	var favoriteslist = req.favoriteslist;
+
+	// favoriteslist.googleapi.build(function(err, api){
+
+	// })
+
+
+	// googleapi.build(function(api) {
+	// 	api.books.mylibrary.bookshelves.list({
+	// 		userId: '114705319517394488779',
+	// 		source: 'gbs_lp_bookshelf_list'
+	// 	}, function(result){
+	// 		if(result.error) {
+	// 			console.log(result.error);
+	// 		} else {
+	// 			for(var i in result.items) {
+	// 		        console.log(result.items[i].summary);
+	// 		    }
+	// 		}
+	// 	});
+	// });
+};	
 
 /**
  * Create a Book

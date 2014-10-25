@@ -25,9 +25,9 @@
 				<div class="col-lg-12">
 					<table class="table">  <!-- technicalCompetenciesTable -->
 						<tr ng-repeat="stuff in experienceStuff">
-							<td><b>{{stuff.workname}}</b>:</td>
-							<td>{{stuff.workdates}}</td>
-							<td>{{stuff.worktype}}</td>
+							<td class="col-md-3"><b>{{stuff.workname}}</b>:</td>
+							<!-- <td>{{stuff.workdates}}</td> -->
+							<td class="col-md-9">{{stuff.worktype}}</td>
 						</tr>
 					</table>
 				</div>
@@ -45,9 +45,9 @@
 				<div class="col-lg-12 col-xs-11">
 					<table class="table">  <!-- technicalCompetenciesTable -->
 						<tr ng-repeat="stuff in corporateStuff">
-							<td><b>{{stuff.workname}}</b>:</td>
-							<td>{{stuff.workdates}}</td>
-							<td>{{stuff.worktitle}}, {{stuff.workdept}}</td>
+							<td class="col-md-3"><b>{{stuff.workname}}</b>:</td>
+							<!-- <td>{{stuff.workdates}}</td> -->
+							<td class="col-md-9">{{stuff.worktitle}}, {{stuff.workdept}}</td>
 							<!-- <td>{{stuff.workdept}}</td> -->
 							<!-- <td>{{stuff.workdesc}}</td> -->
 						</tr>
@@ -73,30 +73,29 @@
 	<section>
 		
 		<h3>Technical competencies</h3>
-		<div class="col-lg-12">
+		<div class="col-lg-12 col-xs-11">
 			<table class="table">  <!-- technicalCompetenciesTable -->
 				<tr ng-repeat="stuff in technicalStuff">
-					<td><b>{{stuff.category}}</b>:</td>
-					<td>{{stuff.skill}}</td>
+					<td class="col-md-3"><b>{{stuff.category}}</b>:</td>
+					<td class="col-md-9">{{stuff.skill}}</td>
 				</tr>
 			</table>
 		</div>
 	</section>
-
 <hr>
 	<section>
 		<h3>Education</h3>
-		<div class="row " ng-repeat="stuff in educationStuff">  <!-- MainCompanyExperience -->
+		<div class="row " ng-repeat="stuff in educationStuff"> 
 			
-			<p class="col-lg-4 workName">{{stuff.name}}</p>
+			<p class="col-lg-3 workName">{{stuff.name}}</p>
 			<p class="col-lg-2 workDates">{{stuff.timeframe}}</p>
-			<p class="col-lg-6 workType"><small>{{stuff.desc1}}</small></p>
-			<div class="col-lg-12 workDescription">
+			<p class="col-lg-7 workType"><small>{{stuff.desc1}} {{stuff.desc2}} {{stuff.desc3}}</small></p>
+			<!-- <div class="col-lg-12 workDescription">
 				<ul style="list-style: none;">
 					<li><i>{{stuff.desc2}}</i></li>
 					<li><i>{{stuff.desc3}}</i></li>
 				</ul>
-			</div>
+			</div> -->
 		</div>
 	</section>
 <hr>
@@ -107,28 +106,28 @@
 			<p class="col-lg-12 workDescription"></p>
 			<!-- -->
 			<p class="col-lg-4 workName">Codeschool.com</p>
-			<p class="col-lg-2 workDates">2014-Present</p>
+			<!-- <p class="col-lg-2 workDates">2014-Present</p> 
 			<p class="col-lg-6 workType"><small>Javascript, Angular.js, Node.js, Google API's</small></p>
-			<p class="col-lg-12 workDescription"> </p>
+			<p class="col-lg-12 workDescription"> </p>-->
 			<!-- -->
 			<p class="col-lg-4 workName">Egghead.io</p>
-			<p class="col-lg-2 workDates">2014-Present</p>
+			<!-- <p class="col-lg-2 workDates">2014-Present</p> 
 			<p class="col-lg-6 workType"><small>Angular.js, Node.js, D3.js</small></p>
-			<p class="col-lg-12 workDescription"> </p>
+			<p class="col-lg-12 workDescription"> </p>-->
 
 			<!-- -->
 			<p class="col-lg-4 workName">Harvard Extension School CS-70</p>
-			<p class="col-lg-2 workDates">2012</p>
+			<!-- <p class="col-lg-2 workDates">2012</p> 
 			<p class="col-lg-6 workType"><small>Building Dynamic Websites</small></p>
-			<p class="col-lg-12 workDescription">Profession David Mylan's class on technology and development of web applications.</p>
+			<p class="col-lg-12 workDescription">Profession David Mylan's class on technology and development of web applications.</p>-->
 		</div>
 	</section>
-<hr>
+<!-- <hr>
 	<section ng-repeat="stuff in extracurricularStuff">
 		
 		<h3>{{stuff.title}}</h3>
 		<p class="col-lg-12 workDescription">{{stuff.desc}}</p>
-	</section>
+	</section> -->
 <hr>
 	<section>
 		<br>

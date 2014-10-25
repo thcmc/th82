@@ -16,17 +16,6 @@ angular.module('core')
           desc3: ''
         },
         {
-          name: 'Pittsburgh Penguins Elite AAA U18',
-          timeframe: '2011 - 2014',
-          league: 'T1EHL',
-          level: 'AAA',
-          city: 'Pittsburgh',
-          role: 'Assistant Coach / Goalie Instructor',
-          desc1: '',
-          desc2: '',
-          desc3: ''
-        },
-        {
           name: 'Penguins Select AAA - Mite, Atom, Squirt',
           timeframe: '2014',
           league: '',
@@ -49,8 +38,19 @@ angular.module('core')
           desc3: ''
         },
         {
+          name: 'Pittsburgh Penguins Elite AAA U18',
+          timeframe: '2011 - 2014',
+          league: 'T1EHL',
+          level: 'AAA',
+          city: 'Pittsburgh',
+          role: 'Assistant Coach / Goalie Instructor',
+          desc1: '',
+          desc2: '',
+          desc3: ''
+        },
+        {
           name: 'Shane Clifford Hockey Schools',
-          timeframe: '1998 - Present',
+          timeframe: '1998 - 2006',
           league: '',
           level: '',
           city: '',
