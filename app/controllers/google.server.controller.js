@@ -1,18 +1,18 @@
-'use strict';
+// 'use strict';
 
 // var googleapis = require('googleapis');
 
-var CLIENT_ID = env.googleapis.client_id;
-var CLIENT_SECRET = env.googleapis.client_secret;
-var oauth2 = new googleapis.OAuth2Client(CLIENT_ID, CLIENT_SECRET, 'postmessage');
+// var CLIENT_ID = env.googleapis.client_id;
+// var CLIENT_SECRET = env.googleapis.client_secret;
+// var oauth2 = new googleapis.OAuth2Client(CLIENT_ID, CLIENT_SECRET, 'postmessage');
  
-var SERVICE_ACCOUNT_EMAIL = '1069740718758-silssr40ivugppo4br8e2o4dk00las85@developer.gserviceaccount.com';
-var SERVICE_ACCOUNT_KEY_FILE = './th82-key-file.pem';
-var jwt = new googleapis.auth.JWT(
-        SERVICE_ACCOUNT_EMAIL,
-        SERVICE_ACCOUNT_KEY_FILE,
-        null,
-        ['https://www.googleapis.com/auth/analytics.readonly']);
+// var SERVICE_ACCOUNT_EMAIL = '1069740718758-silssr40ivugppo4br8e2o4dk00las85@developer.gserviceaccount.com';
+// var SERVICE_ACCOUNT_KEY_FILE = './th82-key-file.pem';
+// var jwt = new googleapis.auth.JWT(
+//         SERVICE_ACCOUNT_EMAIL,
+//         SERVICE_ACCOUNT_KEY_FILE,
+//         null,
+//         ['https://www.googleapis.com/auth/analytics.readonly']);
 
 
 
