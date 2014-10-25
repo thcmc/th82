@@ -6,16 +6,17 @@
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors'),
 	Book = mongoose.model('Book'),
-	_ = require('lodash'),
-	googleapi = require('node-google-api')('AIzaSyAffzxPYpgZ14gieEE04_u4U-5Y26UQ8_0');
+	_ = require('lodash');
+	// ,
+	// googleapi = require('node-google-api')('AIzaSyAffzxPYpgZ14gieEE04_u4U-5Y26UQ8_0');
 
 
-exports.gbooks = function(req, res) {
-	googleapi.build(function(api) {
-	  for(var k in api){
-	    console.log(k);
-	  }
-	});
+// exports.gbooks = function(req, res) {
+// 	googleapi.build(function(api) {
+// 	  for(var k in api){
+// 	    console.log(k);
+// 	  }
+// 	});
 	// 	var favoriteslist = req.favoriteslist;
 
 	// favoriteslist.googleapi.build(function(err, api){
@@ -37,7 +38,7 @@ exports.gbooks = function(req, res) {
 	// 		}
 	// 	});
 	// });
-};	
+// };	
 
 /**
  * Create a Book
